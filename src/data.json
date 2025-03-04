@@ -1,0 +1,312 @@
+{
+    "header": {
+        "menu": [
+            {                
+                "title": "Features",
+                "newTab": false,
+                "path": "#features"
+              },
+              {
+              }
+        ],
+        "cta":{
+            "title": "Pricing",
+            "newTab": false,
+            "path": "#pricing"
+        },
+         "logoLight" : "/images/logo/logo.svg",
+         "logo" : "/images/logo/logo-light.svg"
+    },
+    "hero":{            
+        "heading": {
+            "start":"Create Your Music like a Pro,",
+            "highlighter":"Your AI-powered Music Production",
+            "end":"is ready to go viral!"
+        },
+        "description": "From first-time creators to seasoned artists, transform your ideas into stunning songs, refine your tracks, and share it effortlessly—AI has your back from the first note to the final mix - No Tech fuss, just pure Music Magic!",
+        "cta":{
+            "title": "Start Creating Now",
+            "newTab": true,
+            "path": "https://docs.google.com/forms/d/1-tQe8I15TTU64_z_gilKfwLAkK48N-EBdH97cqSH1vQ/prefill"
+        },
+        "brand":{
+            "description": "Seen at",
+           "icons":[
+            {
+                "name": "ABC",
+                "link": "#",
+                "image": "/images/brands/Feature_TodayShow.png"
+              },
+              {
+                "name": "CBS",
+                "link": "#",
+                "image": "/images/brands/Feature_People.png"
+              },
+              {
+                "name": "FOX",
+                "link": "#",
+                "image": "/images/brands/Feature_GoodMorningAmerica.png"
+              },
+              {
+                "name": "CBS",
+                "link": "#",
+                "image": "/images/brands/media-mention-1.svg"
+              },
+              {
+                "name": "CBS",
+                "link": "#",
+                "image": "/images/brands/logo-abc-news.svg"
+              }
+           ]
+        }
+    },
+    "features": {
+        "title": "Create, refine, and share music in minutes",
+        "description": "No Experience? No Problem! AI makes music production effortless and fun.",
+        "features": [
+            {
+
+                "title": "One-Tap Music Creation",
+                "description":
+                    "Generate a complete song or instrumental track in seconds—AI transforms ideas into full compositions effortlessly",
+                "icon": "/images/features/features-icon-01.svg"
+            },
+            {
+                "title": "Upload Your Own Voice & Lyrics",
+                "description":
+                    "Customize your songs by uploading original vocals and lyrics for a truly personalized experience.",
+                "icon": "/images/features/features-icon-02.svg"
+            },
+            {
+                "title": "AI-Enhanced Harmonization",
+                "description":
+                    "Let AI refine and layer your vocals with professional-grade harmonization.",
+                "icon": "/images/features/features-icon-03.svg"
+            },
+            {
+                "title": "Ready-to-Use Beats & Instrumentals",
+                "description":
+                    "Access an extensive collection of beats across genres and moods to craft the perfect backing for your songs or instrumental tracks.",
+                "icon": "/images/features/features-icon-04.svg"
+            },
+            {
+                "title": "Create Music Effects",
+                "description":
+                    "Explore an expansive set of sound effects and layers to enhance and innovate your compositions.",
+                "icon": "/images/features/features-icon-05.svg"
+            },            
+            {
+                "title": "Seamless Sharing & Collaboration",
+                "description":
+                    "Export your songs and tracks instantly and collaborate with artists worldwide.",
+                "icon": "/images/features/features-icon-06.svg"
+            }
+        ]
+    },
+    "featuresWithImages": {
+        "title": "Stand Out, Create Fast!",
+        "description": "Our platform helps you bring your music to life—effortlessly. With AI-powered composition and seamless mixing, you can create, refine, and share your tracks with ease. Music-making has never been this simple! ",
+        "features": [
+            {
+                "title": "Instant AI-Powered Song Creation",
+                "description":
+                    "Compose songs instantly using AI-driven prompts and beat selection. AI transforms your ideas into polished songs and instrumental tracks in seconds.",
+                "checklist": [
+                    "Generate complete songs and tracks in seconds with AI-assisted composition.",
+                    "Select from multiple genres and moods for unique soundscapes.",
+                    "Fine-tune compositions with AI-driven refinements."
+                ],
+                "image": "/images/features/80653.jpeg"                
+            },
+            {
+                "title": "Personalize Your Sound with your custom vocals, lyrics and sound effects",
+                "description":
+                    "Upload your voice, add lyrics, and shape your sound with several music effects. AI fine-tunes and enhances your creativity.",
+                "checklist": [
+                    "Customize your music with personalized vocals and lyrics.",
+                    "Experiment with AI-driven sound effects and filters.",
+                    "Create dynamic layers with voice harmonization."
+                ],
+                "image": "/images/features/Orange.jpg"                
+            }
+        ]
+    },
+    "counter":{        
+        "title":"Numbers speaking for themselves",
+        "counter":{
+            "value1":{
+                "description":"Songs & Tracks Generated",
+                "value":18000
+            },
+            "value2":{
+                "description":"Songs Uploaded to Streaming Platforms per day",
+                "value":35
+            },
+            "value3":{
+                "description":"Singers & Musicians Using AI for Music Creation",
+                "value":6500
+            }   
+        },
+        "show": true
+    },
+    "pricing":{
+        "title":"Choose a Plan that Fits Your Needs",
+        "description":"Get the tools you need to create, refine, and share your music—without breaking the bank!",
+        "pricing":[
+            {
+                "stripePriceId": "stripe_ID",
+                "unit_amount": 499,
+                "time_period":"month",
+                "nickname": "Basic",
+                "description": "Access AI-powered music creation with essential tools and a selection of beats.",
+                "subtitle": "For Beginners",
+                "includes": [
+                    "Access to a selection of beats and basic AI composition tools.",
+                    "Basic harmonization and sound effect options.",
+                    "Up to 5 AI-generated songs/tracks per month",
+                    "Basic vocal tuning and melody generation."
+                ],
+                "icon": "/images/pricing/pricing-icon-01.svg",
+                "payment_url":"https://buy.stripe.com/00g293cyd3MtbHW5km"
+              },
+              {
+                "stripePriceId": "stripe_ID",
+                "unit_amount": 1999,
+                "time_period":"month",
+                "nickname": "Pro",
+                "description": " Unlock advanced composition, harmonization, and vocal enhancement features.",
+                "subtitle": "For Professionals",
+                "includes": [
+                    "Unlimited access to all beats, music effects, and custom uploads.",
+                    "Advanced music effects and vocal enhancement options.",
+                    "Multi-layer AI composition for richer sound design.",
+                    "Up to 20 AI-generated songs/tracks per month."
+                ],
+                "icon": "/images/pricing/pricing-icon-02.svg",
+                "icon2": "/images/pricing/pricing-icon-02-2.svg",
+                "active": true,
+                "payment_url":"https://buy.stripe.com/test_6oE9Bz9p92dqdQ03c8"
+              }
+        ]
+    },
+    "testimonials":{
+        "title":"A Global Music Movement For Singers, Musicians & Creators",
+        "description":"Join thousands of musicians using AI to create magic!",
+        "testimonials":{
+            "col1":[
+                {                    
+                    "name": "Alex M.",
+                    "role": "Indie Artist",
+                    "text": "TuneCrew AI isn’t just a music app—it’s my AI co-producer, helping me bring my song ideas to life effortlessly!",
+                    "image": "/images/testimonial/author-01.png"
+                },
+                {
+                    "name": " Jamie Randall",
+                    "role": "Singer-Songwriter",
+                    "text": "The AI-powered harmonization and effects make my songs sound professionally mixed in minutes. Game changer!",
+                    "image": "/images/testimonial/author-02.png"
+                }
+                           
+            ],
+            "col2":[
+                {
+                    "name": "Mia Anderson",
+                    "role": "Social Media Influencer",
+                    "text": "I love how I can upload my own vocals and let AI turn them into something incredible. It’s like having a virtual producer in my pocket.",
+                    "image": "/images/testimonial/author-03.png"
+                },
+                {
+                    "name": "Chris Davis",
+                    "role": "Music Enthusiast",
+                    "text": "I never thought making music could be this easy. The AI-generated beats and vocal effects make my tracks sound polished and professional",
+                    "image": "/images/testimonial/author-04.png"
+                }
+            ],
+            "col3":[
+                {
+                    "name": "Jason Keppler",
+                    "role": "Singer, Youtuber",
+                    "text": "As a rapper, having access to instant beats and seamless autotune helps me create and experiment faster than ever. TuneCrew AI is a must-have!",
+                    "image": "/images/testimonial/author-05.png"
+                },
+                {
+                    "name": "Ray Taylor",
+                    "role": "Music Student",
+                    "text": "As a beginner, I was nervous about making music, but TuneCrew AIx made it so easy! The AI guides me through every step, helping me create songs that actually sound professional",
+                    "image": "/images/testimonial/author-06.png"
+                }
+            ]
+        }
+    },
+    "FAQ":{
+        "title":"Frequently Asked Questions",
+        "description":"Got questions? We've got you covered—find all the answers here!",
+        "faq":[
+            {               
+                "question": "What makes TuneCrew AI different from other music creation apps?",
+                "answer":
+                    "Unlike any other music app, TuneCrew AI is your personal AI-powered co-producer, turning raw ideas into fully produced tracks in seconds. With intuitive tools for composition, harmonization, and vocal enhancement, you don’t need production skills—just your creativity."
+            },
+            {
+                "question": "Can I use my own lyrics and vocals?",
+                "answer":
+                    "Yes! Upload your original vocals and lyrics to customize your music. Your AI co-producer helps bring them to life."
+            },
+            {
+                "question": "Is TuneCrew AI suitable for beginners?",
+                "answer":
+                    "Absolutely! No prior music production knowledge is needed—just your creativity, and TuneCrew AI does the rest."
+            },
+            {
+                "question": "Can I share my music?",
+                "answer":
+                    "Yes! Export and share your tracks instantly to social media or collaborate with other artists."
+            }
+        ]
+    },
+    "newsletter":{
+        "title":"Subscribe to our Newsletter",
+        "description":"Get exclusive AI music tips, new feature updates, and special offers—straight to your inbox!",
+        "button_title":"FIll form now",
+        "show": false
+    },
+    "footer":{
+        "logo": "/images/logo/logo-light.svg",
+        "text": "© 2025 Seizento. All rights reserved.",
+        "twitter": "https://twitter.com",        
+        "instagram": "https://instagram.com",
+        "linkedin": "https://linkedin.com",
+        "heading": "Company",
+        "links":[
+            {
+                "title": "About Us",
+                "path": "#"
+            },
+            {
+                "title": "Our Story",
+                "path": "#"
+            },
+            {
+                "title": "Contact Us",
+                "path": "#"
+            }
+            
+        ]
+    },
+    "emailJS": {
+        "serviceId": "service_x16r5zh",
+        "templateId": "template_tqq43y8",
+        "userId": "oYxQpB-dkD5qPgorI",
+        "icon1": "/images/pricing/credit-card-1.svg",
+        "icon2": "/images/pricing/credit-card-2.svg",
+        "icon3": "/images/pricing/credit-card-3.png",
+        "alert_header": "Thank You...!!!",
+        "alert_body": "Thank you for your interest, We are in development process, We did not store your information or deduct any money. We will get back to you really soon"
+      },
+    
+      "airTable": {
+        "airtable_token": "patfWUBwFU5w966d0.25ca6a4d6e83655fd8f864b12211740e91a80310116cc89009b5ffc821d9bece",
+        "airtable_base_ID": "appDJekIPcY0WUhXI",
+        "airtable_table_name": "Users"
+      }
+}
