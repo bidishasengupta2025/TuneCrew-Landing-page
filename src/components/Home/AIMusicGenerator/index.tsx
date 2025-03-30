@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import jsonData from "@/data.json";
-import { FaPlay, FaPause, FaRedo } from "react-icons/fa";
+// import { FaPlay, FaPause, FaRedo } from "react-icons/fa";
 import { IoChevronDownOutline } from "react-icons/io5";
 
 type MoodType = 'upbeat' | 'dreamy';
@@ -264,7 +264,11 @@ const AIMusicGenerator = () => {
                     : "bg-white border-[#f15107] text-[#f15107]"
               }`}
             >
-              {isPlaying ? <PauseIcon /> : <PlayIcon />}
+              {isPlaying ? (
+                <span>⏸</span>
+              ) : (
+                <span>▶</span>
+              )}
             </button>
 
             <button
@@ -277,7 +281,7 @@ const AIMusicGenerator = () => {
               }`}
               title="Generate new sample"
             >
-              <RedoIcon />
+              <span>↻</span>
             </button>
           </div>
 
