@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import jsonData from "@/data.json";
 import { FaPlay, FaPause, FaRedo } from "react-icons/fa";
 import { IoChevronDownOutline } from "react-icons/io5";
