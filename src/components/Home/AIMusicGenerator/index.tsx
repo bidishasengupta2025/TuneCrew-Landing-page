@@ -2,26 +2,24 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import jsonData from "@/data.json";
-// import { FaPlay, FaPause, FaRedo } from "react-icons/fa";
-import { IoChevronDownOutline } from "react-icons/io5";
 
 type MoodType = 'upbeat' | 'dreamy';
 
 const PlayIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="ml-1 w-5 h-5">
-    <path d="M8 5v14l11-7z" />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
   </svg>
 );
 
 const PauseIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path fillRule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z" clipRule="evenodd" />
   </svg>
 );
 
-const RedoIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-    <path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+const RefreshIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path fillRule="evenodd" d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V4.356a.75.75 0 00-1.5 0v3.18l-1.9-1.9A9 9 0 003.306 9.67a.75.75 0 101.45.388zm15.408 3.352a.75.75 0 00-.919.53 7.5 7.5 0 01-12.548 3.364l-1.902-1.903h3.183a.75.75 0 000-1.5H2.984a.75.75 0 00-.75.75v4.992a.75.75 0 001.5 0v-3.18l1.9 1.9a9 9 0 0015.059-4.035.75.75 0 00-.53-.918z" clipRule="evenodd" />
   </svg>
 );
 
@@ -57,11 +55,9 @@ const AIMusicGenerator = () => {
   }, []);
 
   useEffect(() => {
-    // Add event listener to handle download attempts from the audio player menu
     const handleAudioContextMenu = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (target.closest('audio')) {
-        // If clicking download from the menu, redirect to pricing
         document.getElementById('pricing')?.scrollIntoView({ 
           behavior: 'smooth',
           block: 'start'
@@ -88,7 +84,6 @@ const AIMusicGenerator = () => {
     setSelectedMood(event.target.value as MoodType);
   };
 
-  // Map display moods to internal mood types
   const getMoodType = (selectedMood: string): MoodType => {
     switch (selectedMood.toLowerCase()) {
       case 'bright':
@@ -104,10 +99,9 @@ const AIMusicGenerator = () => {
     }
   };
 
-  // Generate sample path based on genre and mood
   const getSamplePath = (genre: string, mood: string) => {
     const moodType = getMoodType(mood);
-    const sampleNumber = Math.floor(Math.random() * 6) + 1; // Random number between 1-6
+    const sampleNumber = Math.floor(Math.random() * 6) + 1;
     return `/audio/${genre.toLowerCase()}/${moodType}/sample${sampleNumber}.mp3`;
   };
 
@@ -115,30 +109,25 @@ const AIMusicGenerator = () => {
     if (!selectedGenre || !selectedMood) return;
 
     try {
-      // If already playing, pause immediately without animation
       if (isPlaying && audioRef.current) {
         audioRef.current.pause();
         setIsPlaying(false);
         return;
       }
 
-      // Show loading animation only when starting playback
       setIsLoading(true);
       let messageIndex = 0;
       
-      // Start cycling through messages
       const messageInterval = setInterval(() => {
         setLoadingMessage(loadingMessages[messageIndex]);
         messageIndex = (messageIndex + 1) % loadingMessages.length;
       }, 1000);
 
-      // Wait for 5 seconds
       await new Promise(resolve => setTimeout(resolve, 5000));
       
       clearInterval(messageInterval);
       setIsLoading(false);
 
-      // Play logic
       const trackToPlay = getSamplePath(selectedGenre, selectedMood);
       
       if (audioRef.current) {
@@ -168,9 +157,8 @@ const AIMusicGenerator = () => {
     try {
       const newTrack = getSamplePath(selectedGenre, selectedMood);
       
-      // Make sure we don't get the same track
       if (newTrack === currentTrack) {
-        regenerateTrack(); // Try again if we got the same track
+        regenerateTrack();
         return;
       }
 
@@ -264,9 +252,7 @@ const AIMusicGenerator = () => {
                     : "bg-white border-[#f15107] text-[#f15107]"
               }`}
             >
-              <span className="text-xl">
-                {isPlaying ? '⏸' : '▶'}
-              </span>
+              {isPlaying ? <PauseIcon /> : <PlayIcon />}
             </button>
 
             <button
@@ -279,11 +265,10 @@ const AIMusicGenerator = () => {
               }`}
               title="Generate new sample"
             >
-              <span className="text-xl">↻</span>
+              <RefreshIcon />
             </button>
           </div>
 
-          {/* Loading Animation */}
           {isLoading && (
             <div className="mb-4 p-4 rounded-lg bg-[#fff2ed] text-[#f15107] animate-pulse">
               <div className="flex items-center">
@@ -324,7 +309,6 @@ const AIMusicGenerator = () => {
             </div>
           )}
 
-          {/* Optional: Keep the upgrade message */}
           <div className="text-xs text-gray-500 mt-1">
             ✨ Upgrade to download tracks
           </div>
@@ -334,4 +318,4 @@ const AIMusicGenerator = () => {
   );
 };
 
-export default AIMusicGenerator; 
+export default AIMusicGenerator;
