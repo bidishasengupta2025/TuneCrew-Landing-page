@@ -10,6 +10,28 @@ import { menuData } from "./menuData";
 import { onScroll } from "@/libs/scrollActive";
 import { usePathname } from "next/navigation";
 
+// Add these type definitions at the top of the file after the imports
+type HeaderMenuItem = {
+  title: string;
+  path: string;
+};
+
+type HeaderData = {
+  logo: string;
+  logoLight: string;
+  menu: HeaderMenuItem[];
+  cta: HeaderMenuItem[];
+};
+
+// Update the menuDataJson import to include types
+declare module "@/data.json" {
+  const value: {
+    header: HeaderData;
+    // ... other properties from your JSON
+  };
+  export default value;
+}
+
 const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
