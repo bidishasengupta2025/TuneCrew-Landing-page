@@ -1,32 +1,36 @@
 {
     "header": {
-        "menu": [
-            {                
+        "menu": [],
+        "cta": [
+            {
                 "title": "Features",
                 "newTab": false,
-                "path": "#features"
-              }
+                "path": "#features",
+                "style": "border-primary"
+            },
+            {
+                "title": "Create Now",
+                "newTab": false,
+                "path": "#music-generator",
+                "style": "border-primary"
+            },
+            {
+                "title": "Pricing",
+                "newTab": false,
+                "path": "#pricing",
+                "style": "border-primary"
+            }
         ],
-        "cta":{
-            "title": "Pricing",
-            "newTab": false,
-            "path": "#pricing"
-        },
-         "logoLight" : "/images/logo/logo.svg",
-         "logo" : "/images/logo/logo-light.svg"
+        "logoLight": "/images/logo/logo.svg",
+        "logo": "/images/logo/logo-light.svg"
     },
     "hero":{            
         "heading": {
-            "start":"Create Your Music like a Pro,",
-            "highlighter":"Your AI-powered Music Production",
-            "end":"is ready to go viral!"
+            "start": "You bring the Vibe.",
+            "highlighter": "Our AI Creates & Optimizes.",
+            "end": "Watch it go Viral!!"
         },
-        "description": "From first-time creators to seasoned artists, transform your ideas into stunning songs, refine your tracks, and share it effortlessly—AI has your back from the first note to the final mix - No Tech fuss, just pure Music Magic!",
-        "cta":{
-            "title": "Start Creating Now",
-            "newTab": true,
-            "path": "https://docs.google.com/forms/d/1-tQe8I15TTU64_z_gilKfwLAkK48N-EBdH97cqSH1vQ/prefill"
-        },
+        "description": "EchoTribe AI helps you create share-worthy tracks with AI, optimized to match social trends and sound like hits—without the production hassle.",
         "brand":{
             "description": "Seen at",
            "icons":[
@@ -59,26 +63,22 @@
         }
     },
     "features": {
-        "title": "Create, refine, and share music in minutes",
-        "description": "No Experience? No Problem! AI makes music production effortless and fun.",
+        "title": "Make Music Fast. Let the Algorithm Do the Rest.",
+        "description": "Let go of the hustle. EchoTribe AI composes your music and masters viral algorithms for you—so you can stay in your creative flow!",
         "features": [
             {
-
                 "title": "One-Tap Music Creation",
-                "description":
-                    "Generate a complete song or instrumental track in seconds—AI transforms ideas into full compositions effortlessly",
+                "description": "Generate a complete song or instrumental track in seconds—AI transforms ideas into full compositions effortlessly",
                 "icon": "/images/features/features-icon-01.svg"
             },
             {
-                "title": "Upload Your Own Voice & Lyrics",
-                "description":
-                    "Customize your songs by uploading original vocals and lyrics for a truly personalized experience.",
+                "title": "The AI-powered Viral Engine",
+                "description": "An intelligent backend system trained on thousands of viral Tiktoks, Reels and Shorts. It analyzes structure, energy, and format—optimizing your song automatically for maximum shareability",
                 "icon": "/images/features/features-icon-02.svg"
             },
             {
-                "title": "AI-Enhanced Harmonization",
-                "description":
-                    "Let AI refine and layer your vocals with professional-grade harmonization.",
+                "title": "Upload Your Own Voice & Lyrics",
+                "description": "Customize your songs by uploading original vocals and lyrics for a truly personalized experience.",
                 "icon": "/images/features/features-icon-03.svg"
             },
             {
@@ -102,8 +102,8 @@
         ]
     },
     "featuresWithImages": {
-        "title": "Stand Out, Create Fast!",
-        "description": "Our platform helps you bring your music to life—effortlessly. With AI-powered composition and seamless mixing, you can create, refine, and share your tracks with ease. Music-making has never been this simple! ",
+        "title": "Transform Your Musical Ideas into Viral Hits with AI Precision",
+        "description": "EchoTribe AI helps you create share-worthy tracks with AI, optimized to match social trends and sound like hits—without the production hassle.",
         "features": [
             {
                 "title": "Instant AI-Powered Song Creation",
@@ -117,13 +117,12 @@
                 "image": "/images/features/80653.jpeg"                
             },
             {
-                "title": "Personalize Your Sound with your custom vocals, lyrics and sound effects",
-                "description":
-                    "Upload your voice, add lyrics, and shape your sound with several music effects. AI fine-tunes and enhances your creativity.",
+                "title": "Let your music Rule the Algorithm",
+                "description": "You bring the creativity—our AI handles the virality. The Viral Engine™ is trained on thousands of top-performing sounds to help your music break through.",
                 "checklist": [
-                    "Customize your music with personalized vocals and lyrics.",
-                    "Experiment with AI-driven sound effects and filters.",
-                    "Create dynamic layers with voice harmonization."
+                    "Optimize your music automatically for TikTok, Reels, and Shorts.",
+                    "Generate scroll-stopping video clips with perfect loops and captions.",
+                    "Predict your track's viral potential before you release it."
                 ],
                 "image": "/images/features/Orange.jpg"                
             }
@@ -133,12 +132,12 @@
         "title":"Numbers speaking for themselves",
         "counter":{
             "value1":{
-                "description":"Songs & Tracks Generated",
-                "value":18000
+                "description":"viral-ready tracks generated",
+                "value":10000
             },
             "value2":{
-                "description":"Songs Uploaded to Streaming Platforms per day",
-                "value":35
+                "description":"creators using Hook Builder daily",
+                "value":1500
             },
             "value3":{
                 "description":"Singers & Musicians Using AI for Music Creation",
@@ -160,6 +159,7 @@
                 "subtitle": "For Beginners",
                 "includes": [
                     "Access to a selection of beats and basic AI composition tools.",
+                    "Basic Remix trends and Viral Analytics",
                     "Basic harmonization and sound effect options.",
                     "Up to 5 AI-generated songs/tracks per month",
                     "Basic vocal tuning and melody generation."
@@ -172,10 +172,11 @@
                 "unit_amount": 1999,
                 "time_period":"month",
                 "nickname": "Pro",
-                "description": " Unlock advanced composition, harmonization, and vocal enhancement features.",
+                "description": "Unlock advanced composition, harmonization, and vocal enhancement features.",
                 "subtitle": "For Professionals",
                 "includes": [
                     "Unlimited access to all beats, music effects, and custom uploads.",
+                    "AI hooks, TrendSignal insights and Viral Analytics",
                     "Advanced music effects and vocal enhancement options.",
                     "Multi-layer AI composition for richer sound design.",
                     "Up to 20 AI-generated songs/tracks per month."
@@ -188,35 +189,34 @@
         ]
     },
     "testimonials":{
-        "title":"A Global Music Movement For Singers, Musicians & Creators",
-        "description":"Join thousands of musicians using AI to create magic!",
+        "title": "A Global Movement of Viral Music Makers",
+        "description": "Join thousands of creators using AI to craft hit-ready tracks, generate viral clips, and let the algorithm do the heavy lifting.",
         "testimonials":{
             "col1":[
                 {                    
                     "name": "Alex M.",
                     "role": "Indie Artist",
-                    "text": "TuneCrew AI isn’t just a music app—it’s my AI co-producer, helping me bring my song ideas to life effortlessly!",
+                    "text": "EchoTribe AI isn't just a music app—it's my AI co-producer, helping me bring my song ideas to life effortlessly!",
                     "image": "/images/testimonial/author-01.png"
                 },
                 {
-                    "name": " Jamie Randall",
-                    "role": "Singer-Songwriter",
-                    "text": "The AI-powered harmonization and effects make my songs sound professionally mixed in minutes. Game changer!",
+                    "name": "Ray J",
+                    "role": "Independent Artist",
+                    "text": "I didn't change my sound. I changed my tools. With EchoTribe AI's viral index and remix generator, my track hit 80K views in 48 hours.",
                     "image": "/images/testimonial/author-02.png"
                 }
-                           
             ],
             "col2":[
                 {
                     "name": "Mia Anderson",
-                    "role": "Social Media Influencer",
-                    "text": "I love how I can upload my own vocals and let AI turn them into something incredible. It’s like having a virtual producer in my pocket.",
+                    "role": "Music Enthusiast",
+                    "text": "I love how I can upload my own vocals and let AI turn them into something incredible. It's like having a virtual producer in my pocket.",
                     "image": "/images/testimonial/author-03.png"
                 },
                 {
-                    "name": "Chris Davis",
+                    "name": "Toni R.",
                     "role": "Music Enthusiast",
-                    "text": "I never thought making music could be this easy. The AI-generated beats and vocal effects make my tracks sound polished and professional",
+                    "text": "I focused on writing lyrics and uploading vocals. EchoTribe AI built the beat, clipped the video, and optimized it. I woke up to 30K views. This is how music should work now.",
                     "image": "/images/testimonial/author-04.png"
                 }
             ],
@@ -224,13 +224,13 @@
                 {
                     "name": "Jason Keppler",
                     "role": "Singer, Youtuber",
-                    "text": "As a rapper, having access to instant beats and seamless autotune helps me create and experiment faster than ever. TuneCrew AI is a must-have!",
+                    "text": "As a rapper, having access to instant beats and seamless autotune helps me create and experiment faster than ever. EchoTribe AI is a must-have!",
                     "image": "/images/testimonial/author-05.png"
                 },
                 {
                     "name": "Ray Taylor",
                     "role": "Music Student",
-                    "text": "As a beginner, I was nervous about making music, but TuneCrew AIx made it so easy! The AI guides me through every step, helping me create songs that actually sound professional",
+                    "text": "As a beginner, I was nervous about making music, but EchoTribe AI made it so easy! The AI guides me through every step, helping me create songs that actually sound professional",
                     "image": "/images/testimonial/author-06.png"
                 }
             ]
@@ -241,24 +241,28 @@
         "description":"Got questions? We've got you covered—find all the answers here!",
         "faq":[
             {               
-                "question": "What makes TuneCrew AI different from other music creation apps?",
-                "answer":
-                    "Unlike any other music app, TuneCrew AI is your personal AI-powered co-producer, turning raw ideas into fully produced tracks in seconds. With intuitive tools for composition, harmonization, and vocal enhancement, you don’t need production skills—just your creativity."
+                "question": "What makes EchoTribe AI different from other music creation apps?",
+                "answer": "Unlike any other music app, EchoTribe is your AI-powered viral launchpad.\n\nFrom vocals and lyrics to full tracks and short-form clips, our Viral Engine transforms raw ideas into share-worthy songs in seconds. With AI tools for beat selection, harmonization, hook generation, and trend optimization, you don't need to master production—or the algorithm. Just bring your creativity—we'll amplify it."
+            },
+            {
+                "question": "Do I need to know anything about music marketing?",
+                "answer": "Nope. EchoTribe AI is built for artists who want to create, not market. Our AI handles everything that makes music trend—from structure to social format."
+            },
+            {
+                "question": "What if I don't understand trends?",
+                "answer": "That's the point. Our Viral Engine and TrendSignal study social platforms in real time and adjust your music output for you. You focus on your art—we'll help it rise."
             },
             {
                 "question": "Can I use my own lyrics and vocals?",
-                "answer":
-                    "Yes! Upload your original vocals and lyrics to customize your music. Your AI co-producer helps bring them to life."
+                "answer": "Yes! Upload your original vocals and lyrics to customize your music. Your AI co-producer helps bring them to life."
             },
             {
-                "question": "Is TuneCrew AI suitable for beginners?",
-                "answer":
-                    "Absolutely! No prior music production knowledge is needed—just your creativity, and TuneCrew AI does the rest."
+                "question": "Is EchoTribe AI suitable for beginners?",
+                "answer": "Absolutely! No prior music production knowledge is needed—just your creativity, and EchoTribe AI does the rest."
             },
             {
                 "question": "Can I share my music?",
-                "answer":
-                    "Yes! Export and share your tracks instantly to social media or collaborate with other artists."
+                "answer": "Yes! Export and share your tracks instantly to social media or collaborate with other artists."
             }
         ]
     },
@@ -269,7 +273,7 @@
         "show": false
     },
     "footer":{
-        "logo": "/images/logo/logo-light.svg",
+        "logo": "/images/logo/logo.svg",
         "text": "© 2025 Seizento. All rights reserved.",
         "twitter": "https://twitter.com",        
         "instagram": "https://instagram.com",
@@ -306,5 +310,23 @@
         "airtable_token": "patfWUBwFU5w966d0.25ca6a4d6e83655fd8f864b12211740e91a80310116cc89009b5ffc821d9bece",
         "airtable_base_ID": "appDJekIPcY0WUhXI",
         "airtable_table_name": "Users"
-      }
+      },
+    "aiMusicGenerator": {
+        "title": "Create Your Music in Seconds",
+        "description": "Choose your style and let AI create a unique track for you",
+        "genres": [
+            {
+                "name": "Pop",
+                "sample": "/audio/pop-sample.mp3"
+            },
+            {
+                "name": "Jazz",
+                "sample": "/audio/jazz-sample.mp3"
+            },
+            {
+                "name": "Techno",
+                "sample": "/audio/techno-sample.mp3"
+            }
+        ]
+    }
 }

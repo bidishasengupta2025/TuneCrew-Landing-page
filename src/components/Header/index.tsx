@@ -117,8 +117,10 @@ const Header = () => {
               "!visible relative mt-4 !h-auto max-h-[400px] overflow-y-scroll rounded-md bg-white p-7.5 shadow-lg dark:bg-gray-dark"
             }`}
           >
-            <nav>
-              <ul className="flex mr-5 flex-col gap-5 xl:flex-row xl:items-center xl:gap-2.5">
+            <nav className="flex items-center">
+              <ThemeSwitcher />
+              
+              <ul className="flex ml-3 mr-5 flex-col gap-5 xl:flex-row xl:items-center xl:gap-2.5">
                 {menuData?.map((item: Menu, key) =>
                   !item?.path && item?.submenu ? (
                     <Dropdown stickyMenu={stickyMenu} item={item} key={key} />
@@ -139,8 +141,10 @@ const Header = () => {
                         }
                         target={item?.newTab ? "_blank" : ""}
                         rel={item?.newTab ? "noopener noreferrer" : ""}
-                        className={`flex rounded-full px-[14px] py-[3px] font-satoshi font-medium ${
-                          pathUrl === item?.path
+                        className={`flex rounded-full px-5 py-2 font-satoshi font-medium ${
+                          item?.title === "Features"
+                            ? "bg-primary text-white hover:bg-primary-dark"
+                            : pathUrl === item?.path
                             ? "bg-primary/5 text-primary dark:bg-white/5 dark:text-white"
                             : "text-black hover:bg-primary/5 hover:text-primary dark:text-gray-5 dark:hover:bg-white/5 dark:hover:text-white"
                         } ${item?.path?.startsWith("#") ? "menu-scroll" : ""}`}
@@ -153,21 +157,29 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="mt-7 flex flex-wrap items-center lg:mt-0">
-              <ThemeSwitcher />
-
-              <Link
-                href={menuDataJson.header.cta?.path || "#"}
-                className="rounded-full bg-primary px-5 py-2 font-satoshi font-medium text-white hover:bg-primary-dark"
-                target={menuDataJson.header.cta?.newTab ? "_blank" : ""}
-                rel={
-                  menuDataJson.header.cta?.newTab ? "noopener noreferrer" : ""
-                }
-              >
-                {menuDataJson.header.cta?.title}
-              </Link>
+            <div className="mt-7 flex flex-wrap items-center gap-3 lg:mt-0">
+              <div className="flex items-center gap-6">
+                {menuDataJson.header.menu.map((menuItem, index) => (
+                  <Link
+                    key={index}
+                    href={menuItem.path}
+                    className="rounded-full border-2 border-primary bg-white px-7 py-3 text-base font-medium text-primary transition hover:bg-primary hover:text-white"
+                  >
+                    {menuItem.title}
+                  </Link>
+                ))}
+                
+                {menuDataJson.header.cta.map((ctaItem, index) => (
+                  <Link
+                    key={index}
+                    href={ctaItem.path}
+                    className="rounded-full border-2 border-primary bg-white px-5 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-white"
+                  >
+                    {ctaItem.title}
+                  </Link>
+                ))}
+              </div>
             </div>
-            {/* <!--=== Nav Right End ===--> */}
           </div>
         </div>
       </header>
