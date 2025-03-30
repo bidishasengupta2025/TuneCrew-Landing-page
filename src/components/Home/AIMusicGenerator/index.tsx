@@ -264,11 +264,9 @@ const AIMusicGenerator = () => {
                     : "bg-white border-[#f15107] text-[#f15107]"
               }`}
             >
-              {isPlaying ? (
-                <span>⏸</span>
-              ) : (
-                <span>▶</span>
-              )}
+              <span className="text-xl">
+                {isPlaying ? '⏸' : '▶'}
+              </span>
             </button>
 
             <button
@@ -281,7 +279,7 @@ const AIMusicGenerator = () => {
               }`}
               title="Generate new sample"
             >
-              <span>↻</span>
+              <span className="text-xl">↻</span>
             </button>
           </div>
 
