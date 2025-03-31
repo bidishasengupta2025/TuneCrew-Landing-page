@@ -23,14 +23,6 @@ type HeaderData = {
   cta: HeaderMenuItem[];
 };
 
-// Update the menuDataJson import to include types
-declare module "@/data.json" {
-  const value: {
-    header: HeaderData;
-    // ... other properties from your JSON
-  };
-  export default value;
-}
 
 const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
