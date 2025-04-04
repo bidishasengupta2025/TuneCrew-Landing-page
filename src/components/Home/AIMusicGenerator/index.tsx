@@ -84,7 +84,7 @@ const AIMusicGenerator = () => {
     setSelectedMood(event.target.value as MoodType);
   };
 
-  const getMoodType = (selectedMood: string): MoodType => {
+  const getMoodType = (selectedMood: string): 'upbeat' | 'dreamy' => {
     switch (selectedMood.toLowerCase()) {
       case 'bright':
       case 'happy':
@@ -100,8 +100,9 @@ const AIMusicGenerator = () => {
   };
 
   const getSamplePath = (genre: string, mood: string) => {
+    const moodType = getMoodType(mood);
     const sampleNumber = Math.floor(Math.random() * 6) + 1;
-    return `/audio/${genre.toLowerCase()}/${mood.toLowerCase()}/sample${sampleNumber}.mp3`;
+    return `/audio/${genre.toLowerCase()}/${moodType}/sample${sampleNumber}.mp3`;
   };
 
   const handlePlay = async () => {
