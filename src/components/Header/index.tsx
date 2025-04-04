@@ -23,6 +23,8 @@ type HeaderData = {
   cta: HeaderMenuItem[];
 };
 
+// Type assertion for menuDataJson to use HeaderData
+const typedMenuData = menuDataJson as { header: HeaderData };
 
 const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -71,14 +73,14 @@ const Header = () => {
           <div className="flex w-full items-center justify-between xl:w-4/12">
             <Link href="/">
               <Image
-                src={menuDataJson.header.logoLight}
+                src={typedMenuData.header.logoLight}
                 alt="Logo"
                 width={100} // Add appropriate width
                 height={50} // Add appropriate height
                 className="hidden w-full dark:block"
               />
               <Image
-                src={menuDataJson.header.logo}
+                src={typedMenuData.header.logo}
                 alt="Logo"
                 width={100}
                 height={50}
@@ -173,17 +175,19 @@ const Header = () => {
 
             <div className="mt-7 flex flex-wrap items-center gap-3 lg:mt-0">
               <div className="flex items-center gap-6">
-                {menuDataJson.header.menu.map((menuItem, index) => (
-                  <Link
-                    key={index}
-                    href={menuItem.path}
-                    className="rounded-full border-2 border-primary bg-white px-7 py-3 text-base font-medium text-primary transition hover:bg-primary hover:text-white"
-                  >
-                    {menuItem.title}
-                  </Link>
-                ))}
+                {typedMenuData.header.menu && typedMenuData.header.menu.length > 0 && 
+                  typedMenuData.header.menu.map((menuItem, index) => (
+                    <Link
+                      key={index}
+                      href={menuItem.path}
+                      className="rounded-full border-2 border-primary bg-white px-7 py-3 text-base font-medium text-primary transition hover:bg-primary hover:text-white"
+                    >
+                      {menuItem.title}
+                    </Link>
+                  ))
+                }
                 
-                {menuDataJson.header.cta.map((ctaItem, index) => (
+                {typedMenuData.header.cta.map((ctaItem, index) => (
                   <Link
                     key={index}
                     href={ctaItem.path}

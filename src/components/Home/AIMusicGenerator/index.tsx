@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import jsonData from "@/data.json";
 
-type MoodType = 'upbeat' | 'dreamy';
+type MoodType = 'bright' | 'happy' | 'upbeat' | 'sad' | 'melancholic' | 'dreamy';
 
 const PlayIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -100,9 +100,8 @@ const AIMusicGenerator = () => {
   };
 
   const getSamplePath = (genre: string, mood: string) => {
-    const moodType = getMoodType(mood);
     const sampleNumber = Math.floor(Math.random() * 6) + 1;
-    return `/audio/${genre.toLowerCase()}/${moodType}/sample${sampleNumber}.mp3`;
+    return `/audio/${genre.toLowerCase()}/${mood.toLowerCase()}/sample${sampleNumber}.mp3`;
   };
 
   const handlePlay = async () => {
@@ -131,10 +130,8 @@ const AIMusicGenerator = () => {
       const trackToPlay = getSamplePath(selectedGenre, selectedMood);
       
       if (audioRef.current) {
-        if (currentTrack !== trackToPlay) {
-          setCurrentTrack(trackToPlay);
-          audioRef.current.src = trackToPlay;
-        }
+        setCurrentTrack(trackToPlay);
+        audioRef.current.src = trackToPlay;
         
         audioRef.current.play().catch(error => {
           console.error('Error playing audio:', error);
@@ -176,11 +173,11 @@ const AIMusicGenerator = () => {
   };
 
   const moodOptions = [
-    { label: "Bright", value: "upbeat" },
-    { label: "Happy", value: "upbeat" },
+    { label: "Bright", value: "bright" },
+    { label: "Happy", value: "happy" },
     { label: "Upbeat", value: "upbeat" },
-    { label: "Sad", value: "dreamy" },
-    { label: "Melancholic", value: "dreamy" },
+    { label: "Sad", value: "sad" },
+    { label: "Melancholic", value: "melancholic" },
     { label: "Dreamy", value: "dreamy" }
   ];
 
