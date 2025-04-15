@@ -30,7 +30,7 @@ const PriceItem = ({ plan }: Props) => {
   return (
     <>
       <div
-        className={`max-w-[400px] mt-10  relative rounded-[20px] p-10 shadow-dropdown  ${
+        className={`max-w-[350px] mt-10 relative rounded-[20px] p-8 shadow-dropdown ${
           active ? "bg-primary" : "bg-white dark:bg-gray-dark"
         }`}
       >

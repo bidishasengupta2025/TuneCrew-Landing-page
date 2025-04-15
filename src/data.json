@@ -26,11 +26,28 @@
     },
     "hero":{            
         "heading": {
-            "start": "You bring the Vibe.",
-            "highlighter": "Our AI Creates & Optimizes.",
-            "end": "Watch it go Viral!!"
+            "start": "Music not taking off?",
+            "highlighter": "Now make viral music fast—and get paid",
+            "end": "No music skills? No problem!!"
         },
-        "description": "Make your next hit music in minutes using AI. EchoTribe AI combines advanced music generation, intelligent beat selection, and a proprietary viral engine to help you create music built for the algorithm—and the audience!!",
+        "description": "Whether you're a Content Creator, Indie artist, or a Newbie—EchoTribe is your secret weapon. Now <span class='highlight'>Create</span>, <span class='highlight'>Predict</span>, <span class='highlight'>Publish</span>, and <span class='highlight'>Earn Money</span> from original, viral-ready music in minutes!!",
+        "targetAudience": {
+            "title": "Who's This Built For? You!",
+            "items": [
+                {
+                    "title": "Creators & Influencers",
+                    "description": "Make trending audios and background tracks in seconds to boost your content's reach."
+                },
+                {
+                    "title": "Indie Artists & Musicians",
+                    "description": "Produce, test, release, and distribute songs without expensive studio time."
+                },
+                {
+                    "title": "Video Editors & Meme Creators",
+                    "description": "Build viral loops, meme music, and edits that stand out on TikTok or YouTube Shorts."
+                }
+            ]
+        },
         "brand":{
             "description": "Seen at",
            "icons":[
@@ -72,9 +89,19 @@
                 "icon": "/images/features/features-icon-01.svg"
             },
             {
+                "title": "Turn Music Into Income",
+                "description": "Earn royalties as your songs stream or license them for creators, content, and games. You own every track and can sell beats, loops, or hooks directly.",
+                "icon": "/images/features/features-icon-05.svg"
+            },
+            {
                 "title": "The AI-powered Viral Engine",
-                "description": "An intelligent backend system trained on thousands of viral Tiktoks, Reels and Shorts. It analyzes structure, energy, and format—optimizing your song automatically for maximum shareability",
+                "description": "Introducing Viral Score—a <strong>one-click AI prediction</strong> of your track's viral potential on TikTok, Reels, or Shorts. Trained on thousands of trends, it analyzes structure, energy, and hooks. Use the score to tweak your track or guide your content strategy.",
                 "icon": "/images/features/features-icon-02.svg"
+            },
+            {
+                "title": "Seamless Distribution & Sharing",
+                "description": "Publish your music to Spotify, Apple Music, TikTok, and more with <strong>one-click distribution</strong>—no label or aggregator needed. Your tracks go straight to where your audience listens.",
+                "icon": "/images/features/features-icon-06.svg"
             },
             {
                 "title": "Upload Your Own Voice & Lyrics",
@@ -86,18 +113,6 @@
                 "description":
                     "Access an extensive collection of beats across genres and moods to craft the perfect backing for your songs or instrumental tracks.",
                 "icon": "/images/features/features-icon-04.svg"
-            },
-            {
-                "title": "Create Music Effects",
-                "description":
-                    "Explore an expansive set of sound effects and layers to enhance and innovate your compositions.",
-                "icon": "/images/features/features-icon-05.svg"
-            },            
-            {
-                "title": "Seamless Sharing & Collaboration",
-                "description":
-                    "Export your songs and tracks instantly and collaborate with artists worldwide.",
-                "icon": "/images/features/features-icon-06.svg"
             }
         ]
     },
@@ -118,11 +133,12 @@
             },
             {
                 "title": "Let your music Rule the Algorithm",
-                "description": "You bring the creativity—our AI handles the virality. The Viral Engine™ is trained on thousands of top-performing sounds to help your music break through.",
+                "description": "You bring the creativity—our AI handles the virality. Our Viral Engine is trained on thousands of top-performing sounds to help your music break through.",
                 "checklist": [
-                    "Optimize your music automatically for TikTok, Reels, and Shorts.",
-                    "Generate scroll-stopping video clips with perfect loops and captions.",
-                    "Predict your track's viral potential before you release it."
+                    "Optimize your music for TikTok, Reels & Shorts",
+                    "Predict your track's viral potential before release",
+                    "Distribute directly to Spotify, Apple Music & more",
+                    "Earn from streams, licensing & content monetization"
                 ],
                 "image": "/images/features/Orange.jpg"                
             }
@@ -147,27 +163,46 @@
         "show": true
     },
     "pricing":{
-        "title":"Choose a Plan that Fits Your Needs",
-        "description":"Get the tools you need to create, refine, and share your music—without breaking the bank!",
+        "title":"Pricing Plans",
+        "description":"Start simple or scale big—EchoTribe AI has a plan for every creator.",
         "pricing":[
+            {
+                "stripePriceId": "stripe_ID",
+                "unit_amount": 0,
+                "time_period":"month",
+                "nickname": "Free",
+                "description": "Just starting out? Test the waters with no risk. Explore what AI music creation feels like with EchoTribe AI",
+                "subtitle": "For Beginners",
+                "includes": [
+                    "3 AI music generations per month",
+                    "Lite Viral Score (basic insights only)",
+                    "Access to a selection of beats and basic AI composition tools",
+                    "Watermarked exports",
+                    "Personal/non-commercial use only"
+                ],
+                "icon": "/images/pricing/pricing-icon-01.svg",
+                "payment_url":"#"
+            },
             {
                 "stripePriceId": "stripe_ID",
                 "unit_amount": 499,
                 "time_period":"month",
                 "nickname": "Basic",
-                "description": "Access AI-powered music creation with essential tools and a selection of beats.",
-                "subtitle": "For Beginners",
+                "description": "For TikTokers, YouTubers & creators chasing viral-ready music. More tracks, smarter insights, real earnings.",
+                "subtitle": "For Creators",
                 "includes": [
-                    "Access to a selection of beats and basic AI composition tools.",
-                    "Basic Remix trends and Viral Analytics",
-                    "Basic harmonization and sound effect options.",
-                    "Up to 5 AI-generated songs/tracks per month",
-                    "Basic vocal tuning and melody generation."
+                    "15 AI-generated tracks per month",
+                    "Full Viral Score with trend recommendations",
+                    "Access to a selection of beats and vocal tuning + melody tools",
+                    "No watermark on exports",
+                    "5 music distributions per month (Spotify, Apple, TikTok)",
+                    "Monetization & licensing enabled"
                 ],
                 "icon": "/images/pricing/pricing-icon-01.svg",
-                "payment_url":"https://buy.stripe.com/00g293cyd3MtbHW5km"
-              },
-              {
+                "payment_url":"https://buy.stripe.com/00g293cyd3MtbHW5km",
+                "active": true
+            },
+            {
                 "stripePriceId": "stripe_ID",
                 "unit_amount": 1999,
                 "time_period":"month",
@@ -175,17 +210,18 @@
                 "description": "Unlock advanced composition, harmonization, and vocal enhancement features.",
                 "subtitle": "For Professionals",
                 "includes": [
-                    "Unlimited access to all beats, music effects, and custom uploads.",
-                    "AI hooks, TrendSignal insights and Viral Analytics",
-                    "Advanced music effects and vocal enhancement options.",
-                    "Multi-layer AI composition for richer sound design.",
-                    "Up to 20 AI-generated songs/tracks per month."
+                    "30 AI-generated tracks/month",
+                    "Advanced viral performance analytics",
+                    "Full access to all beats & effects",
+                    "Pro-level vocal & sound enhancements",
+                    "Multi-layer AI composition tools",
+                    "Distribute to all major platforms",
+                    "Need more? Contact us for custom pricing"
                 ],
                 "icon": "/images/pricing/pricing-icon-02.svg",
                 "icon2": "/images/pricing/pricing-icon-02-2.svg",
-                "active": true,
                 "payment_url":"https://buy.stripe.com/test_6oE9Bz9p92dqdQ03c8"
-              }
+            }
         ]
     },
     "testimonials":{
@@ -198,12 +234,6 @@
                     "role": "Indie Artist",
                     "text": "EchoTribe AI isn't just a music app—it's my AI co-producer, helping me bring my song ideas to life effortlessly!",
                     "image": "/images/testimonial/author-01.png"
-                },
-                {
-                    "name": "Ray J",
-                    "role": "Independent Artist",
-                    "text": "I didn't change my sound. I changed my tools. With EchoTribe AI's viral index and remix generator, my track hit 80K views in 48 hours.",
-                    "image": "/images/testimonial/author-02.png"
                 }
             ],
             "col2":[
@@ -212,12 +242,6 @@
                     "role": "Music Enthusiast",
                     "text": "I love how I can upload my own vocals and let AI turn them into something incredible. It's like having a virtual producer in my pocket.",
                     "image": "/images/testimonial/author-03.png"
-                },
-                {
-                    "name": "Toni R.",
-                    "role": "Music Enthusiast",
-                    "text": "I focused on writing lyrics and uploading vocals. EchoTribe AI built the beat, clipped the video, and optimized it. I woke up to 30K views. This is how music should work now.",
-                    "image": "/images/testimonial/author-04.png"
                 }
             ],
             "col3":[
@@ -226,12 +250,6 @@
                     "role": "Singer, Youtuber",
                     "text": "As a rapper, having access to instant beats and seamless autotune helps me create and experiment faster than ever. EchoTribe AI is a must-have!",
                     "image": "/images/testimonial/author-05.png"
-                },
-                {
-                    "name": "Ray Taylor",
-                    "role": "Music Student",
-                    "text": "As a beginner, I was nervous about making music, but EchoTribe AI made it so easy! The AI guides me through every step, helping me create songs that actually sound professional",
-                    "image": "/images/testimonial/author-06.png"
                 }
             ]
         }

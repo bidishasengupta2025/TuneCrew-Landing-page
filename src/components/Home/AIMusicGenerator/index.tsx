@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import jsonData from "@/data.json";
+import Image from "next/image";
 
 type MoodType = 'bright' | 'happy' | 'upbeat' | 'sad' | 'melancholic' | 'dreamy';
 
@@ -187,28 +188,40 @@ const AIMusicGenerator = () => {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-white rounded-2xl border-2 border-[#f15107] shadow-[0_14px_28px_rgba(241,81,7,0.25)]">
-      <div className="flex flex-col items-center relative z-10">
-        <h2 className="text-2xl font-bold text-[#0F1B4C] mb-2 text-center">
+    <div id="music-generator" className="relative w-full max-w-2xl mx-auto pt-5 scroll-margin-top-24">
+      <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-[#f15107]/20 via-black/5 to-[#f15107]/20 rounded-[40px] transform scale-105"></div>
+      <div className="w-full p-6 backdrop-blur-sm rounded-3xl relative overflow-hidden bg-gradient-to-b from-black/10 to-transparent">
+        {/* Background Image with Color Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-orange-900/30 to-red-900/40 mix-blend-color"></div>
+          <Image
+            src={`/images/hero/music-bg.jpg?v=${new Date().getTime()}`}
+            alt="Music background"
+            width={1000}
+            height={600}
+            className="object-cover w-full h-full rounded-3xl brightness-90"
+            priority
+            unoptimized
+          />
+        </div>
+        
+        <div className="flex flex-col items-start pl-8 pr-6 relative z-10 max-w-[70%]">
+          <h2 className="text-xl font-bold text-white mb-2 whitespace-nowrap">
           Create Your Viral Music in Seconds
         </h2>
-        <p className="text-sm text-gray-600 mb-6 text-center max-w-sm">
-          Make Music Fast. Let the Algorithm Do the Rest.
-        </p>
-
         <div className="w-full mb-6">
-          <h3 className="text-lg font-semibold text-[#0F1B4C] mb-3 text-center">
+            <h3 className="text-lg font-semibold text-white mb-3">
             Select Genre
           </h3>
-          <div className="flex justify-center gap-2">
+            <div className="flex gap-2">
             {jsonData.aiMusicGenerator.genres.map((genre) => (
               <button
                 key={genre.name}
                 onClick={() => setSelectedGenre(genre.name)}
-                className={`px-6 py-2 rounded-full text-sm transition-all border ${
+                  className={`px-6 py-2 rounded-full text-sm transition-all ${
                   selectedGenre === genre.name
-                    ? "bg-[#f15107] border-[#f15107] text-white"
-                    : "bg-white border-[#f15107] text-[#f15107]"
+                      ? "bg-[#f15107] text-white shadow-lg"
+                      : "bg-white/90 text-[#f15107] hover:bg-[#f15107] hover:text-white shadow-md"
                 }`}
               >
                 {genre.name}
@@ -218,14 +231,14 @@ const AIMusicGenerator = () => {
         </div>
 
         <div className="w-full mb-6">
-          <h3 className="text-lg font-semibold text-[#0F1B4C] mb-3 text-center">
+            <h3 className="text-lg font-semibold text-white mb-3">
             Select Your Mood
           </h3>
-          <div className="flex justify-center">
+            <div className="flex">
             <select
               value={selectedMood}
               onChange={(e) => setSelectedMood(e.target.value as MoodType)}
-              className="w-72 p-2.5 rounded-lg border border-[#f15107] focus:outline-none focus:ring-1 focus:ring-[#f15107] text-gray-600 text-sm"
+                className="w-72 p-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#f15107] text-gray-600 text-sm bg-white/90 shadow-md"
             >
               <option value="">Choose your mood...</option>
               {moodOptions.map((option) => (
@@ -237,17 +250,17 @@ const AIMusicGenerator = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col items-center">
+          <div className="w-full">
           <div className="flex gap-4 mb-4">
             <button
               onClick={handlePlay}
               disabled={!selectedGenre || !selectedMood || isLoading}
-              className={`rounded-full w-14 h-14 flex items-center justify-center transition-all ${
+                className={`rounded-full w-14 h-14 flex items-center justify-center transition-all shadow-lg ${
                 !selectedGenre || !selectedMood || isLoading
                   ? "bg-gray-200 cursor-not-allowed"
                   : isPlaying
-                    ? "bg-[#f15107] border-[#f15107] text-white"
-                    : "bg-white border-[#f15107] text-[#f15107]"
+                      ? "bg-[#f15107] text-white"
+                      : "bg-white/90 text-[#f15107] hover:bg-[#f15107] hover:text-white"
               }`}
             >
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
@@ -256,10 +269,10 @@ const AIMusicGenerator = () => {
             <button
               onClick={regenerateTrack}
               disabled={!selectedGenre || !selectedMood}
-              className={`rounded-full w-12 h-12 flex items-center justify-center transition-all border ${
+                className={`rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg ${
                 !selectedGenre || !selectedMood
-                  ? "bg-white border-gray-200 text-gray-200 cursor-not-allowed"
-                  : "bg-white border-[#f15107] text-[#f15107]"
+                    ? "bg-white/90 text-gray-200 cursor-not-allowed"
+                    : "bg-white/90 text-[#f15107] hover:bg-[#f15107] hover:text-white"
               }`}
               title="Generate new sample"
             >
@@ -268,7 +281,7 @@ const AIMusicGenerator = () => {
           </div>
 
           {isLoading && (
-            <div className="mb-4 p-4 rounded-lg bg-[#fff2ed] text-[#f15107] animate-pulse">
+              <div className="mb-4 p-4 rounded-lg bg-white/90 shadow-md text-[#f15107] animate-pulse max-w-sm">
               <div className="flex items-center">
                 <div className="mr-3">
                   <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
@@ -302,13 +315,14 @@ const AIMusicGenerator = () => {
           />
 
           {currentTrack && !isLoading && (
-            <div className="text-sm text-gray-600 mt-2 text-center">
+              <div className="text-sm text-white mt-2">
               Now Playing: {selectedGenre} - {selectedMood}
             </div>
           )}
 
-          <div className="text-xs text-gray-500 mt-1">
+            <div className="text-xs text-white/90 mt-1">
             ✨ Upgrade to download tracks
+            </div>
           </div>
         </div>
       </div>

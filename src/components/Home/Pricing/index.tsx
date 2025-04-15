@@ -18,10 +18,8 @@ const Pricing = () => {
         description={menuDataJson.pricing.description}
       />
 
-      <div className="flex  justify-center ">
-        {/* <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0 border"> */}
-        {/* <div className="grid grid-cols-1 gap-100 sm:grid-cols-2 lg:grid-cols-2 border  "> */}
-        <div className="md:w-full max-w-[1170px]   flex justify-evenly flex-col md:flex-row   ">
+      <div className="flex justify-center">
+        <div className="md:w-full max-w-[1170px] flex flex-col md:flex-row gap-8 justify-center">
           {pricingData &&
             pricingData.map((price, key) => (
               <PriceItem plan={price} key={key} />

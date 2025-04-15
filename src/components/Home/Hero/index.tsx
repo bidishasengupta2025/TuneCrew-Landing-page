@@ -11,7 +11,7 @@ const Hero = () => {
 			{/* Main Hero Section */}
 			<section className='relative z-1 overflow-hidden pb-17.5 pt-30 lg:pb-20 lg:pt-30 xl:pb-25 xl:pt-[170px]'>
 				<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
-					<h1 className='mb-5 font-satoshi text-heading-4 font-bold -tracking-[1.6px] text-black dark:text-white lg:text-heading-2 xl:text-[58px] xl:leading-[1.12] flex flex-col gap-2'>
+					<h1 className='mb-5 font-satoshi text-[24.5px] font-bold -tracking-[1.6px] text-black dark:text-white lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12] flex flex-col gap-2'>
 						<div>
 							{menuDataJson.hero.heading.start}
 						</div>
@@ -45,13 +45,38 @@ const Hero = () => {
 						</div>
 					</h1>
 
-					<p className='mx-auto mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] dark:text-gray-5'>
-						{menuDataJson.hero.description}
+					<p className='mx-auto mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] dark:text-gray-5 [&_.highlight]:text-xl [&_.highlight]:font-bold [&_.highlight]:text-primary' dangerouslySetInnerHTML={{ __html: menuDataJson.hero.description }}>
 					</p>
 				</div>
 
+				{/* Target Audience Section */}
+				<div className='mx-auto mt-12 mb-20 w-full max-w-[740px] px-4 sm:px-8 xl:px-0'>
+					<h2 className='mb-8 text-center font-satoshi text-[24.5px] font-bold -tracking-[1.6px] text-black dark:text-white lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12]'>
+						{menuDataJson.hero.targetAudience.title}
+					</h2>
+					<div className='grid gap-6 md:grid-cols-3'>
+						{menuDataJson.hero.targetAudience.items.map((item, index) => (
+							<div key={index} className='rounded-lg bg-white p-6 shadow-lg dark:bg-dark-2 transition duration-300 ease-in-out hover:shadow-[0px_15px_30px_rgba(249,115,22,0.4)] shadow-[0px_8px_15px_rgba(249,115,22,0.15)]'>
+								<h3 className='mb-3 font-satoshi text-lg font-bold text-black dark:text-white'>
+									{item.title}
+								</h3>
+								<p className='text-gray-6 dark:text-gray-4'>
+									{item.description}
+								</p>
+							</div>
+						))}
+					</div>
+				</div>
+
+				{/* AI Music Generator Heading */}
+				<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
+					<h2 className='font-satoshi text-[24.5px] font-bold -tracking-[1.6px] text-black dark:text-white lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12]'>
+						Say Hello! to your AI-powered Viral Music Launchpad and Create Now
+					</h2>
+				</div>
+
 				{/* AI Music Generator */}
-				<div className='mx-auto mt-12 mb-20'>
+				<div className='mx-auto mb-2'>
 					<AIMusicGenerator />
 				</div>
 

@@ -19,7 +19,7 @@ const TestimonialItem = ({ data }: { data: Testimonial }) => {
 			{/* <!-- divider --> */}
 			<div className='my-6 h-px w-full bg-stroke dark:bg-stroke-dark'></div>
 
-			<p className='dark:text-gray-5'>“{data?.text},,</p>
+			<p className='dark:text-gray-5'>"{data?.text}"</p>
 		</div>
 	);
 };
