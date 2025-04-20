@@ -201,8 +201,8 @@
                 "icon": "/images/pricing/pricing-icon-01.svg",
                 "payment_url":"https://buy.stripe.com/00g293cyd3MtbHW5km",
                 "active": true
-            },
-            {
+              },
+              {
                 "stripePriceId": "stripe_ID",
                 "unit_amount": 1999,
                 "time_period":"month",
@@ -221,7 +221,7 @@
                 "icon": "/images/pricing/pricing-icon-02.svg",
                 "icon2": "/images/pricing/pricing-icon-02-2.svg",
                 "payment_url":"https://buy.stripe.com/test_6oE9Bz9p92dqdQ03c8"
-            }
+              }
         ]
     },
     "testimonials":{
@@ -329,6 +329,11 @@
         "airtable_base_ID": "appDJekIPcY0WUhXI",
         "airtable_table_name": "Users"
       },
+
+      "googleAnalytics": {
+        "GA_MEASUREMENT_ID": "G-WTFR3GZV18"
+    },
+    
     "aiMusicGenerator": {
         "title": "Create Your Music in Seconds",
         "description": "Choose your style and let AI create a unique track for you",

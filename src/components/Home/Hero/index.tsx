@@ -25,7 +25,7 @@ const Hero = () => {
 						<div>
 							<span className="relative">
 								{menuDataJson.hero.heading.end}
-								<span className='absolute bottom-0.5 left-0 h-2 w-full pl-1 pr-2'>
+								<span className='absolute bottom-1 left-0 h-2 w-full pl-1 pr-2'>
 									<svg
 										className='fill-current'
 										width='106%'
