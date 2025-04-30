@@ -26,13 +26,13 @@
     },
     "hero":{            
         "heading": {
-            "start": "Music not taking off?",
-            "highlighter": "Now make viral music fast—and get paid",
-            "end": "No music skills? No problem!!"
+            "start": "Creators & Influencers—Stuck using the same old sounds?",
+            "highlighter": "What if Reels, TikToks, and Shorts ran on <span class='text-[#FF5722]'><i>YOUR Track</i> — and paid you for it?</span>",
+            "end": ""
         },
-        "description": "Whether you're a Content Creator, Indie artist, or a Newbie—EchoTribe is your secret weapon. Now <span class='highlight'>Create</span>, <span class='highlight'>Predict</span>, <span class='highlight'>Publish</span>, and <span class='highlight'>Earn Money</span> from original, viral-ready music in minutes!!",
+        "description": "Whether you're a Content Creator, Indie artist, or a Newbie—EchoTribe is your secret weapon. Now <span class='text-[#FF5722] font-bold'>Create</span>, <span class='text-[#FF5722] font-bold'>Predict</span>, <span class='text-[#FF5722] font-bold'>Publish</span>, and <span class='text-[#FF5722] font-bold'>Earn Money</span> from original, viral-ready music in minutes!!",
         "targetAudience": {
-            "title": "Who's This Built For? You!",
+            "title": "Who's This Built For? — You!",
             "items": [
                 {
                     "title": "Creators & Influencers",

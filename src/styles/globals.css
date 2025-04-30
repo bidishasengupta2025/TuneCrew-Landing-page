@@ -43,3 +43,62 @@
 .active {
 	@apply bg-primary/5 text-primary dark:bg-white/5 dark:text-white;
 }
+
+/* Glossy Text Effects */
+.text-shadow-lg {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-sm {
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.glow-text-strong {
+	text-shadow: 0 0 15px rgba(255, 87, 34, 0.7),
+				0 0 25px rgba(255, 87, 34, 0.5),
+				0 0 35px rgba(255, 87, 34, 0.3);
+	animation: pulse-strong 2s infinite;
+}
+
+@keyframes pulse-strong {
+	0% {
+		text-shadow: 0 0 15px rgba(255, 87, 34, 0.7),
+					0 0 25px rgba(255, 87, 34, 0.5),
+					0 0 35px rgba(255, 87, 34, 0.3);
+	}
+	50% {
+		text-shadow: 0 0 20px rgba(255, 87, 34, 0.8),
+					0 0 30px rgba(255, 87, 34, 0.6),
+					0 0 40px rgba(255, 87, 34, 0.4);
+	}
+	100% {
+		text-shadow: 0 0 15px rgba(255, 87, 34, 0.7),
+					0 0 25px rgba(255, 87, 34, 0.5),
+					0 0 35px rgba(255, 87, 34, 0.3);
+	}
+}
+
+.glow-text {
+	text-shadow: 0 0 10px rgba(255, 112, 67, 0.6),
+				0 0 20px rgba(255, 112, 67, 0.4),
+				0 0 30px rgba(255, 112, 67, 0.2);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		text-shadow: 0 0 10px rgba(255, 112, 67, 0.6),
+					0 0 20px rgba(255, 112, 67, 0.4),
+					0 0 30px rgba(255, 112, 67, 0.2);
+	}
+	50% {
+		text-shadow: 0 0 15px rgba(255, 112, 67, 0.7),
+					0 0 25px rgba(255, 112, 67, 0.5),
+					0 0 35px rgba(255, 112, 67, 0.3);
+	}
+	100% {
+		text-shadow: 0 0 10px rgba(255, 112, 67, 0.6),
+					0 0 20px rgba(255, 112, 67, 0.4),
+					0 0 30px rgba(255, 112, 67, 0.2);
+	}
+}

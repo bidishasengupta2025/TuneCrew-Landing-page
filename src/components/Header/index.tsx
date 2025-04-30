@@ -27,181 +27,95 @@ type HeaderData = {
 const typedMenuData = menuDataJson as { header: HeaderData };
 
 const Header = () => {
-  const [stickyMenu, setStickyMenu] = useState(false);
-  const [searchModalOpen, setSearchModalOpen] = useState(false);
-
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathUrl = usePathname();
 
-  const handleStickyMenu = () => {
-    if (window.scrollY > 0) {
-      setStickyMenu(true);
-    } else {
-      setStickyMenu(false);
-    }
-  };
-
-  // Navbar toggle
-  const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
 
+  // Handle scroll
   useEffect(() => {
-    if (window.location.pathname === "/") {
-      window.addEventListener("scroll", onScroll);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
     };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyMenu);
-  });
-
   return (
-    <>
-      <header
-        className={`fixed left-0 top-0 z-999 w-full transition-all duration-300 ease-in-out  ${
-          stickyMenu
-            ? "bg-white py-4 shadow dark:bg-dark xl:py-0"
-            : "bg-transparent py-7 xl:py-0"
-        }`}
-      >
-        <div className="relative mx-auto max-w-[1170px] items-center justify-between px-4 sm:px-8 xl:flex xl:px-0">
-          <div className="flex w-full items-center justify-between xl:w-4/12">
-            <Link href="/">
-              <Image
-                src={typedMenuData.header.logoLight}
-                alt="Logo"
-                width={100} // Add appropriate width
-                height={50} // Add appropriate height
-                className="hidden w-full dark:block"
-              />
-              <Image
-                src={typedMenuData.header.logo}
-                alt="Logo"
-                width={100}
-                height={50}
-                className="w-full dark:hidden"
-              />
-            </Link>
-            {/* <!-- Hamburger Toggle BTN --> */}
-            <button
-              onClick={navbarToggleHandler}
-              aria-label="button for menu toggle"
-              className="block xl:hidden"
-            >
-              <span className="relative block h-5.5 w-5.5 cursor-pointer">
-                <span className="du-block absolute right-0 h-full w-full">
-                  <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
-                      !navbarOpen && "!w-full delay-300"
-                    }`}
-                  ></span>
-                  <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
-                      !navbarOpen && "delay-400 !w-full"
-                    }`}
-                  ></span>
-                  <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
-                      !navbarOpen && "!w-full delay-500"
-                    }`}
-                  ></span>
-                </span>
-                <span className="du-block absolute right-0 h-full w-full rotate-45">
-                  <span
-                    className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
-                      !navbarOpen && "!h-0 delay-[0]"
-                    }`}
-                  ></span>
-                  <span
-                    className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
-                      !navbarOpen && "dealy-200 !h-0"
-                    }`}
-                  ></span>
-                </span>
-              </span>
-            </button>
-          </div>
+    <header className={`fixed left-0 top-0 z-50 w-full bg-white transition-all duration-300 ${
+      isScrolled ? 'shadow-md' : ''
+    }`}>
+      <div className="container mx-auto px-4">
+        <div className="relative flex items-center justify-between py-5">
+          {/* Logo */}
+          <Link href="/" className="block">
+            <Image
+              src={typedMenuData.header.logo}
+              alt="Logo"
+              width={100}
+              height={50}
+              className="w-full"
+            />
+          </Link>
 
-          <div
-            className={`invisible h-0 w-full items-center justify-end xl:visible xl:flex xl:h-auto xl:w-8/12 ${
-              navbarOpen &&
-              "!visible relative mt-4 !h-auto max-h-[400px] overflow-y-scroll rounded-md bg-white p-7.5 shadow-lg dark:bg-gray-dark"
-            }`}
+          {/* Mobile Menu Button */}
+          <button
+            onClick={navbarToggleHandler}
+            className="block xl:hidden"
           >
-            <nav className="flex items-center">
-              <ThemeSwitcher />
-              
-              <ul className="flex ml-3 mr-5 flex-col gap-5 xl:flex-row xl:items-center xl:gap-2.5">
-                {menuData?.map((item: Menu, key) =>
-                  !item?.path && item?.submenu ? (
-                    <Dropdown stickyMenu={stickyMenu} item={item} key={key} />
-                  ) : (
-                    <li
-                      key={key}
-                      className={`${
-                        item?.submenu ? "group relative" : "nav__menu"
-                      } ${stickyMenu ? "xl:py-4" : "xl:py-6"}`}
-                    >
+            <span className="relative block h-5.5 w-5.5 cursor-pointer">
+              <span className={`absolute block h-0.5 w-full bg-black transition-all duration-300 ${navbarOpen ? 'top-2.5 rotate-45' : 'top-0'}`}></span>
+              <span className={`absolute top-2.5 block h-0.5 w-full bg-black transition-all duration-300 ${navbarOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`absolute block h-0.5 w-full bg-black transition-all duration-300 ${navbarOpen ? 'top-2.5 -rotate-45' : 'top-5'}`}></span>
+            </span>
+          </button>
+
+          {/* Navigation Menu */}
+          <nav className={`absolute left-0 top-full w-full xl:static xl:w-auto xl:opacity-100 ${
+            navbarOpen ? 'block' : 'hidden xl:block'
+          }`}>
+            <div className="container mx-auto">
+              <div className="flex flex-col items-center gap-8 bg-white p-4 xl:flex-row xl:bg-transparent xl:p-0">
+                <ThemeSwitcher />
+                
+                <ul className="flex flex-col items-center gap-4 xl:flex-row">
+                  {menuData?.map((item: Menu, key) => (
+                    <li key={key}>
                       <Link
-                        href={
-                          item?.path
-                            ? item?.path.includes("#") && !item?.newTab
-                              ? `/${item?.path}`
-                              : item?.path
-                            : ""
-                        }
-                        target={item?.newTab ? "_blank" : ""}
-                        rel={item?.newTab ? "noopener noreferrer" : ""}
-                        className={`flex rounded-full px-5 py-2 font-satoshi font-medium ${
+                        href={item?.path || '#'}
+                        className={`block rounded-full px-5 py-2 transition-colors ${
                           item?.title === "Features"
-                            ? "bg-primary text-white hover:bg-primary-dark"
-                            : pathUrl === item?.path
-                            ? "bg-primary/5 text-primary dark:bg-white/5 dark:text-white"
-                            : "text-black hover:bg-primary/5 hover:text-primary dark:text-gray-5 dark:hover:bg-white/5 dark:hover:text-white"
-                        } ${item?.path?.startsWith("#") ? "menu-scroll" : ""}`}
+                            ? "bg-primary text-white hover:bg-primary/90"
+                            : "text-gray-900 hover:text-primary"
+                        }`}
                       >
                         {item?.title}
                       </Link>
                     </li>
-                  )
-                )}
-              </ul>
-            </nav>
+                  ))}
+                </ul>
 
-            <div className="mt-7 flex flex-wrap items-center gap-3 lg:mt-0">
-              <div className="flex items-center gap-6">
-                {typedMenuData.header.menu && typedMenuData.header.menu.length > 0 && 
-                  typedMenuData.header.menu.map((menuItem, index) => (
+                <div className="flex items-center gap-4">
+                  {typedMenuData.header.cta.map((ctaItem, index) => (
                     <Link
                       key={index}
-                      href={menuItem.path}
-                      className="rounded-full border-2 border-primary bg-white px-7 py-3 text-base font-medium text-primary transition hover:bg-primary hover:text-white"
+                      href={ctaItem.path}
+                      className="rounded-full border-2 border-primary bg-white px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
                     >
-                      {menuItem.title}
+                      {ctaItem.title}
                     </Link>
-                  ))
-                }
-                
-                {typedMenuData.header.cta.map((ctaItem, index) => (
-                  <Link
-                    key={index}
-                    href={ctaItem.path}
-                    className="rounded-full border-2 border-primary bg-white px-5 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-white"
-                  >
-                    {ctaItem.title}
-                  </Link>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </nav>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 
