@@ -47,12 +47,12 @@ const Hero = () => {
 
 					<div className='relative z-10 pt-30 pb-10 lg:pt-30 xl:pt-[170px]'>
 						<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
-							<div className="backdrop-blur-md bg-black/30 p-8 rounded-2xl border border-white/10 shadow-xl"
+							<div className="backdrop-blur-sm bg-black/20 p-8 rounded-2xl border border-white/5 shadow-2xl"
 								style={{
-									backdropFilter: 'blur(12px)',
-									WebkitBackdropFilter: 'blur(12px)',
-									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
-									background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.3))'
+									backdropFilter: 'blur(8px)',
+									WebkitBackdropFilter: 'blur(8px)',
+									background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.2))',
+									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
 								}}>
 								<h1 className='mb-5 font-satoshi text-[24.5px] font-bold -tracking-[1.6px] lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12] flex flex-col gap-2'>
 									<div 
@@ -65,8 +65,15 @@ const Hero = () => {
 									</div>
 									
 									<div>
-										<span className='text-white font-bold' dangerouslySetInnerHTML={{ __html: menuDataJson.hero.heading.highlighter }}>
-										</span>
+										<span 
+											className='text-white font-bold' 
+											dangerouslySetInnerHTML={{ 
+												__html: menuDataJson.hero.heading.highlighter.replace(
+													'text-[#FF5722]',
+													'text-[#FF4D00] font-bold'
+												) 
+											}}
+										/>
 									</div>
 
 									<div className="text-shadow-lg">
@@ -92,8 +99,15 @@ const Hero = () => {
 									</div>
 								</h1>
 
-								<p className='mx-auto mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] text-white/90 [&_.highlight]:text-xl [&_.highlight]:font-bold [&_.highlight]:text-white' dangerouslySetInnerHTML={{ __html: menuDataJson.hero.description }}>
-								</p>
+								<p 
+									className='mx-auto mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] text-white/90' 
+									dangerouslySetInnerHTML={{ 
+										__html: menuDataJson.hero.description.replace(
+											/text-\[#FF5722\]/g,
+											'text-[#FF4D00] font-bold'
+										)
+									}}
+								/>
 							</div>
 						</div>
 					</div>
