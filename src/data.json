@@ -27,10 +27,10 @@
     "hero":{            
         "heading": {
             "start": "Creators & Influencers—Stuck using the same old sounds?",
-            "highlighter": "What if Reels, TikToks, and Shorts ran on <span class='text-[#FF5722]'><i>YOUR Track</i> — and paid you for it?</span>",
+            "highlighter": "What if Reels, TikToks, and Shorts ran on <span style='color: #FF4D00'><i>YOUR Track</i> — and paid you for it?</span>",
             "end": ""
         },
-        "description": "Whether you're a Content Creator, Indie artist, or a Newbie—EchoTribe is your secret weapon. Now <span class='text-[#FF5722] font-bold'>Create</span>, <span class='text-[#FF5722] font-bold'>Predict</span>, <span class='text-[#FF5722] font-bold'>Publish</span>, and <span class='text-[#FF5722] font-bold'>Earn Money</span> from original, viral-ready music in minutes!!",
+        "description": "Whether you're a Content Creator, Indie artist, or a Newbie—EchoTribe is your secret weapon. Now <span style='color: #FF4D00; font-weight: bold'>Create</span>, <span style='color: #FF4D00; font-weight: bold'>Predict</span>, <span style='color: #FF4D00; font-weight: bold'>Publish</span>, and <span style='color: #FF4D00; font-weight: bold'>Earn Money</span> from original, viral-ready music in minutes!!",
         "targetAudience": {
             "title": "Who's This Built For? — You!",
             "items": [

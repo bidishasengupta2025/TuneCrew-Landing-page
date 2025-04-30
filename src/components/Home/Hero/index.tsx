@@ -47,13 +47,17 @@ const Hero = () => {
 
 					<div className='relative z-10 pt-30 pb-10 lg:pt-30 xl:pt-[170px]'>
 						<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
-							<div className="backdrop-blur-sm bg-black/20 p-8 rounded-2xl border border-white/5 shadow-2xl"
+							<div
 								style={{
-									backdropFilter: 'blur(8px)',
-									WebkitBackdropFilter: 'blur(8px)',
-									background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.2))',
-									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-								}}>
+									background: 'linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))',
+									borderRadius: '16px',
+									padding: '2rem',
+									backdropFilter: 'blur(6px)',
+									WebkitBackdropFilter: 'blur(6px)',
+									border: '1px solid rgba(255, 255, 255, 0.03)',
+									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)'
+								}}
+							>
 								<h1 className='mb-5 font-satoshi text-[24.5px] font-bold -tracking-[1.6px] lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12] flex flex-col gap-2'>
 									<div 
 										className="text-white"
@@ -68,10 +72,7 @@ const Hero = () => {
 										<span 
 											className='text-white font-bold' 
 											dangerouslySetInnerHTML={{ 
-												__html: menuDataJson.hero.heading.highlighter.replace(
-													'text-[#FF5722]',
-													'text-[#FF4D00] font-bold'
-												) 
+												__html: menuDataJson.hero.heading.highlighter
 											}}
 										/>
 									</div>
@@ -79,22 +80,6 @@ const Hero = () => {
 									<div className="text-shadow-lg">
 										<span className="relative text-white">
 											{menuDataJson.hero.heading.end}
-											<span className='absolute bottom-1 left-0 h-2 w-full pl-1 pr-2'>
-												<svg
-													className='fill-white opacity-60'
-													width='106%'
-													height='100%'
-													viewBox='0 0 100 7'
-													preserveAspectRatio='none'
-													xmlns='http://www.w3.org/2000/svg'
-												>
-													<path
-														fillRule='evenodd'
-														clipRule='evenodd'
-														d='M100 2.49998C100 1.50001 100 2.5 100 1.50001C64.2857 -0.240394 17.4603 3.99028 0 6.05927L0 2.05807C17.4603 0.641568 64.2857 0 100 2.49998Z'
-													/>
-												</svg>
-											</span>
 										</span>
 									</div>
 								</h1>
@@ -102,10 +87,7 @@ const Hero = () => {
 								<p 
 									className='mx-auto mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] text-white/90' 
 									dangerouslySetInnerHTML={{ 
-										__html: menuDataJson.hero.description.replace(
-											/text-\[#FF5722\]/g,
-											'text-[#FF4D00] font-bold'
-										)
+										__html: menuDataJson.hero.description
 									}}
 								/>
 							</div>
