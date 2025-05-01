@@ -189,8 +189,8 @@ const AIMusicGenerator = () => {
 
   return (
     <div id="music-generator" className="relative w-full max-w-2xl mx-auto pt-5 scroll-margin-top-24">
-      <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-[#f15107]/20 via-black/5 to-[#f15107]/20 rounded-[40px] transform scale-105"></div>
-      <div className="w-full p-6 backdrop-blur-sm rounded-3xl relative overflow-hidden bg-gradient-to-b from-black/10 to-transparent">
+      <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-[#f15107]/20 via-black/5 to-[#f15107]/20 transform scale-105"></div>
+      <div className="w-full p-6 backdrop-blur-sm relative overflow-hidden bg-gradient-to-b from-black/10 to-transparent">
         {/* Background Image with Color Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-orange-900/30 to-red-900/40 mix-blend-color"></div>
@@ -199,7 +199,7 @@ const AIMusicGenerator = () => {
             alt="Music background"
             width={1000}
             height={600}
-            className="object-cover w-full h-full rounded-3xl brightness-90"
+            className="object-cover w-full h-full brightness-90"
             priority
             unoptimized
           />
