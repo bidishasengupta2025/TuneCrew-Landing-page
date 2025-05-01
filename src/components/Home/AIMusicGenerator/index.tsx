@@ -55,24 +55,6 @@ const AIMusicGenerator = () => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    const handleAudioContextMenu = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.closest('audio')) {
-        document.getElementById('pricing')?.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    };
-
-    document.addEventListener('click', handleAudioContextMenu);
-
-    return () => {
-      document.removeEventListener('click', handleAudioContextMenu);
-    };
-  }, []);
-
   const handleGenerate = () => {
     if (!selectedGenre || !selectedMood) return;
     setLoading(true);
@@ -124,7 +106,7 @@ const AIMusicGenerator = () => {
         messageIndex = (messageIndex + 1) % loadingMessages.length;
       }, 1000);
 
-      await new Promise(resolve => setTimeout(resolve, 5000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
       clearInterval(messageInterval);
       setIsLoading(false);
@@ -135,10 +117,15 @@ const AIMusicGenerator = () => {
         setCurrentTrack(trackToPlay);
         audioRef.current.src = trackToPlay;
         
-        audioRef.current.play().catch(error => {
-          console.error('Error playing audio:', error);
-        });
-        setIsPlaying(true);
+        try {
+          await audioRef.current.play();
+          setIsPlaying(true);
+        } catch (playError) {
+          console.error('Playback failed:', playError);
+          setLoadingMessage('Please use the audio controls below to play');
+          setIsLoading(true);
+          setTimeout(() => setIsLoading(false), 3000);
+        }
       }
     } catch (error) {
       console.error('Error in handlePlay:', error);
@@ -309,9 +296,11 @@ const AIMusicGenerator = () => {
 
           <audio
             ref={audioRef}
-            onEnded={() => setIsPlaying(false)}
+            onEnded={handleAudioEnd}
             controls
             className="w-64 mt-2"
+            controlsList="noplaybackrate"
+            preload="metadata"
           />
 
           {currentTrack && !isLoading && (
