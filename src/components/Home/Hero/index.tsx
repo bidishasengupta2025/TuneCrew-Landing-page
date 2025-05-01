@@ -58,19 +58,21 @@ const Hero = () => {
 									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)'
 								}}
 							>
-								<h1 className='mb-5 font-satoshi text-[24.5px] font-bold -tracking-[1.6px] lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12] flex flex-col gap-6'>
+								<h1 className='mb-5 font-satoshi text-[24.5px] font-bold -tracking-[1.6px] lg:text-[33.6px] xl:text-[40.6px] xl:leading-[1.12]'>
 									<div 
-										className="text-white"
+										className="text-white mb-8"
 										style={{
-											textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)'
+											textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
+											marginBottom: '2rem'
 										}}
 									>
 										{menuDataJson.hero.heading.start}
 									</div>
 									
-									<div style={{ marginTop: '0.5rem' }}>
+									<div style={{ marginBottom: '2rem' }}>
 										<span 
-											className='text-white font-bold' 
+											className='text-white font-bold leading-relaxed' 
+											style={{ lineHeight: '1.5' }}
 											dangerouslySetInnerHTML={{ 
 												__html: menuDataJson.hero.heading.highlighter
 											}}
@@ -85,7 +87,8 @@ const Hero = () => {
 								</h1>
 
 								<p 
-									className='mx-auto mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] text-white/90' 
+									className='mx-auto mt-8 mb-7.5 w-full max-w-[580px] text-lg -tracking-[0.2px] text-white/90' 
+									style={{ lineHeight: '1.6' }}
 									dangerouslySetInnerHTML={{ 
 										__html: menuDataJson.hero.description
 									}}
