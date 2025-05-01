@@ -27,7 +27,7 @@
     "hero":{            
         "heading": {
             "start": "Creators & Influencers—Stuck recycling other's same old tracks?",
-            "highlighter": "What if their Reels, TikToks, and Shorts ran on <span style='color: #FF4D00'><i>YOUR Tracks now</i> — and got you paid?</span>",
+            "highlighter": "What if their Reels, TikToks, and Shorts ran on <span style='color: #FF4D00; font-style: italic; font-weight: bold'>YOUR Tracks now</span> — and got you paid?",
             "end": ""
         },
         "description": "Whether you're a Content Creator, Indie artist, or a Newbie—EchoTribe is your secret weapon. Now <span style='color: #FF4D00; font-weight: bold'>Create</span>, <span style='color: #FF4D00; font-weight: bold'>Predict</span>, <span style='color: #FF4D00; font-weight: bold'>Publish</span>, and <span style='color: #FF4D00; font-weight: bold'>Earn Money</span> from original, viral-ready music in minutes!!",
