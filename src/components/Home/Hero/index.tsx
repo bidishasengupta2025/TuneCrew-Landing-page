@@ -56,9 +56,9 @@ const Hero = () => {
 									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)'
 								}}
 							>
-								<h1 className='mb-5 font-satoshi text-base font-semibold -tracking-[1.6px] leading-[1.6] lg:text-[28px] lg:font-bold xl:text-[32px] xl:leading-[1.12]'>
+								<h1 className='mb-5 font-satoshi text-xl font-normal -tracking-[1.6px] leading-[1.6] lg:text-[28px] lg:font-bold xl:text-[32px] xl:leading-[1.12]'>
 									<div 
-										className="text-white font-satoshi font-semibold lg:font-bold"
+										className="text-white font-satoshi font-normal lg:font-bold"
 										style={{
 											textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
 											marginBottom: '1.2rem',
@@ -70,7 +70,7 @@ const Hero = () => {
 									
 									<div style={{ marginBottom: '1.2rem' }}>
 										<span 
-											className='text-white font-semibold leading-relaxed font-satoshi lg:font-bold' 
+											className='text-white font-normal leading-relaxed font-satoshi lg:font-bold' 
 											style={{ lineHeight: '1.6' }}
 											dangerouslySetInnerHTML={{ 
 												__html: menuDataJson.hero.heading.highlighter
