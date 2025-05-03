@@ -56,23 +56,22 @@ const Hero = () => {
 									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)'
 								}}
 							>
-								<h1 className='mb-5 font-satoshi text-[20px] font-bold -tracking-[1.6px] lg:text-[28px] xl:text-[32px] xl:leading-[1.12]'>
+								<h1 className='mb-5 font-satoshi text-base font-semibold -tracking-[1.6px] leading-[1.6] lg:text-[28px] lg:font-bold xl:text-[32px] xl:leading-[1.12]'>
 									<div 
-										className="text-white font-satoshi"
+										className="text-white font-satoshi font-semibold lg:font-bold"
 										style={{
 											textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
-											marginBottom: '2rem',
-											lineHeight: '1.5',
-											fontWeight: 700
+											marginBottom: '1.2rem',
+											lineHeight: '1.6',
 										}}
 									>
 										{menuDataJson.hero.heading.start}
 									</div>
 									
-									<div style={{ marginBottom: '2rem' }}>
+									<div style={{ marginBottom: '1.2rem' }}>
 										<span 
-											className='text-white font-bold leading-relaxed font-satoshi' 
-											style={{ lineHeight: '1.5' }}
+											className='text-white font-semibold leading-relaxed font-satoshi lg:font-bold' 
+											style={{ lineHeight: '1.6' }}
 											dangerouslySetInnerHTML={{ 
 												__html: menuDataJson.hero.heading.highlighter
 											}}
