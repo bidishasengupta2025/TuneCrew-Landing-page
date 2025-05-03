@@ -9,7 +9,7 @@ const Hero = () => {
 	return (
 		<>
 			{/* Main Hero Section */}
-			<div className="relative pt-[100px]">
+			<div className="relative pt-0">
 				{/* Hero Text Section with Background */}
 				<div className="relative min-h-[500px] w-full overflow-hidden">
 					{/* Background div with direct styling */}
@@ -20,40 +20,38 @@ const Hero = () => {
 							backgroundSize: 'cover',
 							backgroundPosition: 'center',
 							backgroundRepeat: 'no-repeat',
-							filter: 'contrast(1.4) brightness(0.8) saturate(1.4)',
+							filter: 'contrast(1.2) brightness(1) saturate(1.1)',
 							transform: 'scale(1.01)',
 							zIndex: '-1'
 						}}
 					/>
 					
-					{/* Colored overlay gradients */}
-					<div 
+					{/* Remove colored overlay gradients for max visibility */}
+					{/* <div 
 						className="absolute top-0 left-0 w-full h-full"
 						style={{
 							background: 'linear-gradient(45deg, rgba(255,69,0,0.15), rgba(255,140,0,0.15))',
 							mixBlendMode: 'color',
 							zIndex: '-1'
 						}}
-					/>
+					/> */}
 
-					{/* Dark overlay for text readability */}
-					<div 
+					{/* Remove dark overlay for text readability */}
+					{/* <div 
 						className="absolute top-0 left-0 w-full h-full"
 						style={{
 							background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.5) 100%)',
 							zIndex: '-1'
 						}}
-					/>
+					/> */}
 
 					<div className='relative z-10 pt-30 pb-10 lg:pt-30 xl:pt-[170px]'>
 						<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
 							<div
 								style={{
-									background: 'linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))',
+									background: 'rgba(0,0,0,0.5)',
 									borderRadius: '16px',
 									padding: '2rem',
-									backdropFilter: 'blur(6px)',
-									WebkitBackdropFilter: 'blur(6px)',
 									border: '1px solid rgba(255, 255, 255, 0.03)',
 									boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)'
 								}}

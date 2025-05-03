@@ -46,21 +46,24 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed left-0 top-0 z-50 w-full bg-white transition-all duration-300 ${
+    <header className={`fixed left-0 top-0 z-50 w-full bg-transparent transition-all duration-300 ${
       isScrolled ? 'shadow-md' : ''
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4" style={{position: 'relative', zIndex: 2}}>
         <div className="relative flex items-center justify-between py-5">
           {/* Logo */}
-          <Link href="/" className="block">
-            <Image
-              src={typedMenuData.header.logo}
-              alt="Logo"
-              width={100}
-              height={50}
-              className="w-full"
-            />
-          </Link>
+          <div style={{position: 'relative', display: 'inline-block'}}>
+            <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(255,255,255,0.7)', borderRadius: '8px', zIndex: 1}} />
+            <Link href="/" className="block" style={{position: 'relative', zIndex: 2}}>
+              <Image
+                src={typedMenuData.header.logo}
+                alt="Logo"
+                width={100}
+                height={50}
+                className="w-full"
+              />
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -79,7 +82,7 @@ const Header = () => {
             navbarOpen ? 'block' : 'hidden xl:block'
           }`}>
             <div className="container mx-auto">
-              <div className="flex flex-col items-center gap-8 bg-white p-4 xl:flex-row xl:bg-transparent xl:p-0">
+              <div className="flex flex-col items-center gap-8 bg-transparent p-4 xl:flex-row xl:bg-transparent xl:p-0">
                 <ThemeSwitcher />
                 
                 <ul className="flex flex-col items-center gap-4 xl:flex-row">
