@@ -45,7 +45,7 @@ const Hero = () => {
 						}}
 					/> */}
 
-					<div className='relative z-10 pt-[70vh] pb-10 sm:pt-30 lg:pt-30 xl:pt-[170px]'>
+					<div className='relative z-10 pt-[30vh] pb-10 sm:pt-30 lg:pt-30 xl:pt-[170px]'>
 						<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
 							<div
 								style={{
@@ -66,17 +66,16 @@ const Hero = () => {
 											fontWeight: 700
 										}}
 									>
-										{menuDataJson.hero.heading.start}
+										Creators & Influencers—Stuck recycling other's same old tracks?
 									</div>
 									
 									<div style={{ marginBottom: '2rem' }}>
 										<span 
 											className='text-white font-bold leading-relaxed' 
 											style={{ lineHeight: '1.5' }}
-											dangerouslySetInnerHTML={{ 
-												__html: menuDataJson.hero.heading.highlighter
-											}}
-										/>
+										>
+											What if your music powered their Tiktoks & Reels now on—and paid you?
+										</span>
 									</div>
 
 									<div className="text-shadow-lg">
