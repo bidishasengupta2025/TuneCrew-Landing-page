@@ -45,7 +45,7 @@ const Hero = () => {
 						}}
 					/> */}
 
-					<div className='relative z-10 pt-30 pb-10 lg:pt-30 xl:pt-[170px]'>
+					<div className='relative z-10 pt-[70vh] pb-10 sm:pt-30 lg:pt-30 xl:pt-[170px]'>
 						<div className='mx-auto w-full max-w-[740px] px-4 text-center sm:px-8 xl:px-0'>
 							<div
 								style={{
