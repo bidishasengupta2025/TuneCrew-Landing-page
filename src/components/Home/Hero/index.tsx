@@ -115,7 +115,7 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-0 pt-[80px] md:pt-0 flex flex-col justify-center items-center bg-[#E55A2B] py-6 md:py-8" style={{height: 'auto', maxHeight: 'none'}}>
+		<section className="w-full min-h-0 pt-[70px] md:pt-0 flex flex-col justify-center items-center bg-[#E55A2B] py-6 md:py-8" style={{height: 'auto', maxHeight: 'none'}}>
 			<div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-8">
 				{/* Left: Text Content */}
 				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-20 md:mt-28 max-w-xl md:max-w-2xl px-4 md:px-8 py-4 md:py-6">
