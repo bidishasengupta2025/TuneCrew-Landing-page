@@ -46,21 +46,27 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed left-0 top-0 z-50 w-full bg-transparent transition-all duration-300 ${
+    <header className={`fixed left-0 top-0 z-50 w-full bg-white dark:bg-black transition-all duration-300 ${
       isScrolled ? 'shadow-md' : ''
     }`}>
       <div className="container mx-auto px-4" style={{position: 'relative', zIndex: 2}}>
         <div className="relative flex items-center justify-between py-5">
           {/* Logo */}
-          <div style={{position: 'relative', display: 'inline-block'}}>
-            <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(255,255,255,0.7)', borderRadius: '8px', zIndex: 1}} />
+          <div style={{position: 'relative', display: 'inline-block'}} className="ml-[-24px]">
             <Link href="/" className="block" style={{position: 'relative', zIndex: 2}}>
               <Image
-                src={typedMenuData.header.logo}
+                src="/images/logo/logo-light.svg"
                 alt="Logo"
-                width={100}
-                height={50}
-                className="w-[100px] h-[50px]"
+                width={428}
+                height={80}
+                className="w-[428px] h-[80px] dark:hidden"
+              />
+              <Image
+                src="/images/logo/logo.svg"
+                alt="Logo"
+                width={428}
+                height={80}
+                className="hidden w-[428px] h-[80px] dark:block"
               />
             </Link>
           </div>
@@ -71,9 +77,9 @@ const Header = () => {
             className="block xl:hidden"
           >
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
-              <span className={`absolute block h-0.5 w-full bg-black transition-all duration-300 ${navbarOpen ? 'top-2.5 rotate-45' : 'top-0'}`}></span>
-              <span className={`absolute top-2.5 block h-0.5 w-full bg-black transition-all duration-300 ${navbarOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`absolute block h-0.5 w-full bg-black transition-all duration-300 ${navbarOpen ? 'top-2.5 -rotate-45' : 'top-5'}`}></span>
+              <span className={`absolute block h-0.5 w-full bg-black dark:bg-white transition-all duration-300 ${navbarOpen ? 'top-2.5 rotate-45' : 'top-0'}`}></span>
+              <span className={`absolute top-2.5 block h-0.5 w-full bg-black dark:bg-white transition-all duration-300 ${navbarOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`absolute block h-0.5 w-full bg-black dark:bg-white transition-all duration-300 ${navbarOpen ? 'top-2.5 -rotate-45' : 'top-5'}`}></span>
             </span>
           </button>
 
@@ -93,7 +99,7 @@ const Header = () => {
                         className={`block rounded-full px-5 py-2 transition-colors ${
                           item?.title === "Features"
                             ? "bg-primary text-white hover:bg-primary/90"
-                            : "text-gray-900 hover:text-primary"
+                            : "text-gray-900 dark:text-white hover:text-primary"
                         }`}
                       >
                         {item?.title}
@@ -107,7 +113,7 @@ const Header = () => {
                     <Link
                       key={index}
                       href={ctaItem.path}
-                      className="rounded-full border-2 border-primary bg-white px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
+                      className="rounded-full border-2 border-primary dark:border-white bg-white dark:bg-transparent px-5 py-2 text-sm font-medium text-primary dark:text-white transition-colors hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary"
                     >
                       {ctaItem.title}
                     </Link>

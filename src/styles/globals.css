@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=open-sauce-one@400,500,600,700,800,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -101,4 +110,112 @@
 					0 0 20px rgba(255, 112, 67, 0.4),
 					0 0 30px rgba(255, 112, 67, 0.2);
 	}
+}
+
+.animated-gradient-bg {
+	background: linear-gradient(-45deg, #ffb347, #ffcc33, #ff6f61, #f15107, #ffb347);
+	background-size: 400% 400%;
+	animation: gradient-move 12s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+.animated-gradient-overlay {
+	background: linear-gradient(-45deg, rgba(255,179,71,0.65), rgba(255,204,51,0.55), rgba(255,111,97,0.55), rgba(241,81,7,0.55), rgba(255,179,71,0.65));
+	background-size: 400% 400%;
+	animation: gradient-move 4s ease-in-out infinite;
+	mix-blend-mode: lighten;
+}
+
+/* Bokeh overlay is handled inline in the component for flexibility */
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fade-slide-up 1.2s cubic-bezier(0.4,0.2,0.2,1) both;
+}
+
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.font-greatvibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-satisfy {
+  font-family: 'Satisfy', cursive;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-eaglelake {
+  font-family: 'Eagle Lake', cursive;
+}
+
+.font-open-sauce {
+  font-family: 'Open Sauce One', sans-serif;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #000;
+  animation: typing 3.5s steps(60, end) 1s 1 normal both, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #000; }
+}
+
+@keyframes gradientPulseLeft {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes gradientPulseRight {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+.animated-gradient-left {
+  background: linear-gradient(135deg, #ff9800 0%, #ffb347 60%, #ffcc33 100%);
+  background-size: 200% 200%;
+  animation: gradientPulseLeft 4s ease-in-out infinite;
+}
+.animated-gradient-right {
+  background: linear-gradient(225deg, #f15107 0%, #ffb347 60%, #ffcc33 100%);
+  background-size: 200% 200%;
+  animation: gradientPulseRight 4s ease-in-out infinite;
 }

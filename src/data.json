@@ -26,11 +26,11 @@
     },
     "hero":{            
         "heading": {
-            "start": "Creators & Influencers—Stuck recycling other's same old tracks?",
-            "highlighter": "What if your music powered their Tiktoks & Reels now on—and paid you?",
+            "start": "Creators - Your next post could launch tomorrow's biggest trend.",
+            "highlighter": "Create AI music with built-in viral DNA—and watch the world follow you!!",
             "end": ""
         },
-        "description": "You <span style='color: #FFD700; font-weight: bold;'>Create</span> AI Music. We <span style='color: #FFD700; font-weight: bold;'>Predict</span> the virality. <span style='color: #FFD700; font-weight: bold;'>Publish</span>. Get paid fast!",
+        "description": "",
         "targetAudience": {
             "title": "Who's This Built For? — You!",
             "items": [
@@ -81,7 +81,7 @@
     },
     "features": {
         "title": "Make Music Fast. Let the Algorithm Do the Rest.",
-        "description": "Let go of the hustle. EchoTribe AI composes your music and masters viral algorithms for you—so you can stay in your creative flow!",
+        "description": "Let go of the hustle. Eilumi AI composes your music and masters viral algorithms for you—so you can stay in your creative flow!",
         "features": [
             {
                 "title": "One-Tap Music Creation",
@@ -118,7 +118,7 @@
     },
     "featuresWithImages": {
         "title": "Transform Your Musical Ideas into Viral Hits with AI Precision",
-        "description": "EchoTribe AI helps you create share-worthy tracks with AI, optimized to match social trends and sound like hits—without the production hassle.",
+        "description": "Eilumi AI helps you create share-worthy tracks with AI, optimized to match social trends and sound like hits—without the production hassle.",
         "features": [
             {
                 "title": "Instant AI-Powered Song Creation",
@@ -164,14 +164,14 @@
     },
     "pricing":{
         "title":"Pricing Plans",
-        "description":"Start simple or scale big—EchoTribe AI has a plan for every creator.",
+        "description":"Start simple or scale big—Eilumi AI has a plan for every creator.",
         "pricing":[
             {
                 "stripePriceId": "stripe_ID",
                 "unit_amount": 0,
                 "time_period":"month",
                 "nickname": "Free",
-                "description": "Just starting out? Test the waters with no risk. Explore what AI music creation feels like with EchoTribe AI",
+                "description": "Just starting out? Test the waters with no risk. Explore what AI music creation feels like with Eilumi AI",
                 "subtitle": "For Beginners",
                 "includes": [
                     "3 AI music generations per month",
@@ -232,7 +232,7 @@
                 {                    
                     "name": "Alex M.",
                     "role": "Indie Artist",
-                    "text": "EchoTribe AI isn't just a music app—it's my AI co-producer, helping me bring my song ideas to life effortlessly!",
+                    "text": "Eilumi AI isn't just a music app—it's my AI co-producer, helping me bring my song ideas to life effortlessly!",
                     "image": "/images/testimonial/author-01.png"
                 }
             ],
@@ -248,7 +248,7 @@
                 {
                     "name": "Jason Keppler",
                     "role": "Singer, Youtuber",
-                    "text": "As a rapper, having access to instant beats and seamless autotune helps me create and experiment faster than ever. EchoTribe AI is a must-have!",
+                    "text": "As a rapper, having access to instant beats and seamless autotune helps me create and experiment faster than ever. Eilumi AI is a must-have!",
                     "image": "/images/testimonial/author-05.png"
                 }
             ]
@@ -259,12 +259,12 @@
         "description":"Got questions? We've got you covered—find all the answers here!",
         "faq":[
             {               
-                "question": "What makes EchoTribe AI different from other music creation apps?",
-                "answer": "Unlike any other music app, EchoTribe is your AI-powered viral launchpad.\n\nFrom vocals and lyrics to full tracks and short-form clips, our Viral Engine transforms raw ideas into share-worthy songs in seconds. With AI tools for beat selection, harmonization, hook generation, and trend optimization, you don't need to master production—or the algorithm. Just bring your creativity—we'll amplify it."
+                "question": "What makes Eilumi AI different from other music creation apps?",
+                "answer": "Unlike any other music app, Eilumi is your AI-powered viral launchpad.\n\nFrom vocals and lyrics to full tracks and short-form clips, our Viral Engine transforms raw ideas into share-worthy songs in seconds. With AI tools for beat selection, harmonization, hook generation, and trend optimization, you don't need to master production—or the algorithm. Just bring your creativity—we'll amplify it."
             },
             {
                 "question": "Do I need to know anything about music marketing?",
-                "answer": "Nope. EchoTribe AI is built for artists who want to create, not market. Our AI handles everything that makes music trend—from structure to social format."
+                "answer": "Nope. Eilumi AI is built for artists who want to create, not market. Our AI handles everything that makes music trend—from structure to social format."
             },
             {
                 "question": "What if I don't understand trends?",
@@ -275,8 +275,8 @@
                 "answer": "Yes! Upload your original vocals and lyrics to customize your music. Your AI co-producer helps bring them to life."
             },
             {
-                "question": "Is EchoTribe AI suitable for beginners?",
-                "answer": "Absolutely! No prior music production knowledge is needed—just your creativity, and EchoTribe AI does the rest."
+                "question": "Is Eilumi AI suitable for beginners?",
+                "answer": "Absolutely! No prior music production knowledge is needed—just your creativity, and Eilumi AI does the rest."
             },
             {
                 "question": "Can I share my music?",
