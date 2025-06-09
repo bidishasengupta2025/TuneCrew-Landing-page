@@ -115,16 +115,16 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-0 pt-[62px] md:pt-0 flex flex-col justify-center items-center bg-[#E55A2B] py-6 md:py-8" style={{height: 'auto', maxHeight: 'none'}}>
+		<section className="w-full min-h-0 pt-[48px] md:pt-0 flex flex-col justify-center items-center bg-[#E55A2B] py-6 md:py-8" style={{height: 'auto', maxHeight: 'none'}}>
 			<div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-8">
 				{/* Left: Text Content */}
 				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-20 md:mt-28 max-w-xl md:max-w-2xl px-4 md:px-8 py-4 md:py-6">
 					<h1
-						className="text-white font-open-sauce"
+						className="text-white font-roboto md:font-open-sauce"
 						style={{
 							fontSize: '42px',
 							fontWeight: 700,
-							lineHeight: 1.1,
+							lineHeight: '1.22',
 							letterSpacing: '0.5px',
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)'
 						}}
@@ -142,7 +142,7 @@ const Hero = () => {
 							margin: '12px 0'
 						}}
 					>
-						Generate <span style={{fontWeight: 600}}>original AI music</span> for Reels, TikToks, YouTube in <span style={{fontWeight: 600, fontSize: '28px'}}>30 seconds</span>.
+						Generate <span style={{fontWeight: 600}}>original AI music</span> for Reels, TikToks, YouTube in <span style={{fontWeight: 600, fontSize: '28px'}}>30 seconds</span> and <span style={{fontWeight: 700}}>skip Copyright strikes.</span>
 					</div>
 					<div
 						className="text-white mb-4 font-open-sauce"
