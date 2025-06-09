@@ -86,21 +86,30 @@ const Header = () => {
           {/* Navigation Menu */}
           <nav className={`absolute left-0 top-full w-full xl:static xl:w-auto xl:opacity-100 ${
             navbarOpen ? 'block' : 'hidden xl:block'
-          }`}>
-            <div className="container mx-auto">
+          }`} 
+            style={{
+              background: navbarOpen ? '#fff' : 'transparent',
+              borderRadius: navbarOpen ? '0 0 18px 18px' : '0',
+              boxShadow: navbarOpen ? '0 8px 32px rgba(0,0,0,0.10)' : 'none',
+              zIndex: 10,
+              transition: 'all 0.3s',
+            }}
+          >
+            <div className="container mx-auto xl:px-0 px-0">
               <div className="flex flex-col items-center gap-8 bg-transparent p-4 xl:flex-row xl:bg-transparent xl:p-0">
                 <ThemeSwitcher />
                 
-                <ul className="flex flex-col items-center gap-4 xl:flex-row">
+                <ul className="flex flex-col items-center gap-4 xl:flex-row xl:gap-4">
                   {menuData?.map((item: Menu, key) => (
-                    <li key={key}>
+                    <li key={key} className="w-full xl:w-auto">
                       <Link
                         href={item?.path || '#'}
-                        className={`block rounded-full px-5 py-2 transition-colors ${
+                        className={`block w-full text-center rounded-full px-6 py-3 text-base font-semibold transition-colors xl:w-auto xl:text-left xl:rounded-full xl:px-5 xl:py-2 ${
                           item?.title === "Features"
                             ? "bg-primary text-white hover:bg-primary/90"
-                            : "text-gray-900 dark:text-white hover:text-primary"
-                        }`}
+                            : "text-gray-900 dark:text-white hover:text-primary bg-orange-50 xl:bg-transparent"
+                        } ${navbarOpen ? 'shadow-md border border-orange-200' : ''}`}
+                        style={{margin: navbarOpen ? '6px 0' : undefined}}
                       >
                         {item?.title}
                       </Link>
@@ -108,12 +117,13 @@ const Header = () => {
                   ))}
                 </ul>
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col xl:flex-row items-center gap-4 w-full xl:w-auto">
                   {typedMenuData.header.cta.map((ctaItem, index) => (
                     <Link
                       key={index}
                       href={ctaItem.path}
-                      className="rounded-full border-2 border-primary dark:border-white bg-white dark:bg-transparent px-5 py-2 text-sm font-medium text-primary dark:text-white transition-colors hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary"
+                      className="w-full xl:w-auto rounded-full border-2 border-primary dark:border-white bg-white dark:bg-transparent px-6 py-3 xl:px-5 xl:py-2 text-base font-medium text-primary dark:text-white transition-colors hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary shadow-md xl:shadow-none mb-2 xl:mb-0"
+                      style={{margin: navbarOpen ? '6px 0' : undefined}}
                     >
                       {ctaItem.title}
                     </Link>
