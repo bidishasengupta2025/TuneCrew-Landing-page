@@ -129,7 +129,7 @@ const Hero = () => {
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)'
 						}}
 					>
-						Why settle for recycled sound when your content is original?
+						Why settle for <span style={{background: '#000', color: '#fff', padding: '0 8px', borderRadius: '6px', display: 'inline-block', marginRight: '6px', marginLeft: '4px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone'}}>recycled sound</span> when your <span style={{background: '#fff', color: '#E55A2B', padding: '0 8px', borderRadius: '6px', display: 'inline-block', marginLeft: '6px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone'}}>content is original</span>?
 					</h1>
 					<div
 						className="text-white mt-4 mb-4 font-open-sauce"
