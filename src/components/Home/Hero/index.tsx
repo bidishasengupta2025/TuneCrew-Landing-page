@@ -129,7 +129,7 @@ const Hero = () => {
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)'
 						}}
 					>
-						While everyone uses the same 5 TikTok tracks, <span style={{fontWeight: 600}}>smart creators</span> are making their own!
+						Why settle for recycled sound when your content is original?
 					</h1>
 					<div
 						className="text-white mt-4 mb-4 font-open-sauce"
@@ -142,7 +142,8 @@ const Hero = () => {
 							margin: '12px 0'
 						}}
 					>
-						Generate <span style={{fontWeight: 600}}>original AI music</span> for Reels, TikToks, YouTube in <span style={{fontWeight: 600, fontSize: '28px'}}>30 seconds</span> and <span style={{fontWeight: 700}}>skip Copyright strikes.</span>
+						Make AI music for Reels, TikToks, and more- Copyright free.<br/>
+						<span style={{fontWeight: 600}}>Bonus:</span> Get a trend rating that compares your track to what's going viral.
 					</div>
 					<div
 						className="text-white mb-4 font-open-sauce"
