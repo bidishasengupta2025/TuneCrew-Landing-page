@@ -129,7 +129,7 @@ const Hero = () => {
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)'
 						}}
 					>
-						Why settle for <span style={{background: '#000', color: '#fff', padding: '0 4px', borderRadius: '4px', display: 'inline-block', marginRight: '4px', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: 'clamp(1.1em, 4vw, 1.3em)'}}>recycled sound</span> when your&nbsp;<span style={{background: '#fff', color: '#E55A2B', padding: '0 4px', borderRadius: '4px', display: 'inline-block', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: 'clamp(1.1em, 4vw, 1.3em)'}}>content is original</span>?
+						Why settle for <span style={{background: '#000', color: '#fff', padding: '0 2px', borderRadius: '4px', display: 'inline-block', marginRight: '4px', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>recycled sound</span> when your&nbsp;<span style={{background: '#fff', color: '#E55A2B', padding: '0 2px', borderRadius: '4px', display: 'inline-block', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>content is original</span>?
 					</h1>
 					<div
 						className="text-white mt-4 mb-4 font-open-sauce"
