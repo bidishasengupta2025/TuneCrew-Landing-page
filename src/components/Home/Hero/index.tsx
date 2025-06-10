@@ -122,19 +122,19 @@ const Hero = () => {
 					<h1
 						className="text-white font-roboto md:font-open-sauce"
 						style={{
-							fontSize: '42px',
+							fontSize: '2.1rem',
 							fontWeight: 700,
-							lineHeight: '1.22',
+							lineHeight: 1.18,
 							letterSpacing: '0.5px',
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)'
 						}}
 					>
-						Why settle for <span style={{background: '#000', color: '#fff', padding: '0 2px', borderRadius: '4px', display: 'inline-block', marginRight: '4px', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>recycled sound</span> when your&nbsp;<span style={{background: '#fff', color: '#E55A2B', padding: '0 2px', borderRadius: '4px', display: 'inline-block', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>content is original</span>?
+						Why settle for <span style={{background: '#000', color: '#fff', padding: '0 1px', borderRadius: '4px', display: 'inline-block', marginRight: '3px', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>recycled sound</span> when your&nbsp;<span style={{background: '#fff', color: '#E55A2B', padding: '0 1px', borderRadius: '4px', display: 'inline-block', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>content is original</span><span style={{whiteSpace: 'nowrap'}}>? </span>
 					</h1>
 					<div
 						className="text-white mt-4 mb-4 font-open-sauce"
 						style={{
-							fontSize: '24px',
+							fontSize: '1.35rem',
 							fontWeight: 500,
 							lineHeight: 1.4,
 							letterSpacing: '0.3px',
@@ -142,7 +142,7 @@ const Hero = () => {
 							margin: '12px 0'
 						}}
 					>
-						Make AI music for Reels, TikToks, and more- Copyright free.<br/>
+						Make AI music for <span style={{fontWeight: 700}}>Reels, TikToks</span>, and more- Copyright free.<br/>
 						<span style={{fontWeight: 600}}>Bonus:</span> Get a trend rating that compares your track to what's going viral.
 					</div>
 					<div
