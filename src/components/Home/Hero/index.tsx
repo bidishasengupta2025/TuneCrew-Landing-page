@@ -120,45 +120,40 @@ const Hero = () => {
 				{/* Left: Text Content */}
 				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-20 md:mt-28 max-w-xl md:max-w-2xl px-4 md:px-8 py-4 md:py-6">
 					<h1
-						className="text-white font-roboto md:font-open-sauce"
-						style={{
-							fontSize: '2.1rem',
-							fontWeight: 700,
-							lineHeight: 1.18,
-							letterSpacing: '0.5px',
-							textShadow: '0 2px 4px rgba(0,0,0,0.1)'
-						}}
+						className="font-satoshi text-3xl font-bold -tracking-[1.6px] text-white lg:text-heading-4 xl:text-heading-2"
 					>
-						Why settle for <span style={{background: '#000', color: '#fff', padding: '0 1px', borderRadius: '4px', display: 'inline-block', marginRight: '3px', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>recycled sound</span> when your&nbsp;<span style={{background: '#fff', color: '#E55A2B', padding: '0 1px', borderRadius: '4px', display: 'inline-block', marginLeft: '2px', marginTop: '4px', marginBottom: '4px', lineHeight: 1.2, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone', whiteSpace: 'nowrap', fontSize: '1em'}}>content is original</span><span style={{whiteSpace: 'nowrap'}}>? </span>
+						Your content is original. Shouldn't your music be too?
 					</h1>
 					<div
-						className="text-white mt-4 mb-4 font-open-sauce"
+						className="text-white mt-4 mb-4"
 						style={{
 							fontSize: '1.35rem',
 							fontWeight: 500,
 							lineHeight: 1.4,
 							letterSpacing: '0.3px',
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)',
-							margin: '12px 0'
+							margin: '12px 0',
+							fontFamily: 'Satoshi, sans-serif'
 						}}
 					>
 						Make AI music for <span style={{fontWeight: 700}}>Reels, TikToks</span>, and more- Copyright free.<br/>
-						<span style={{fontWeight: 600}}>Bonus:</span> Get a trend rating that compares your track to what's going viral.
+						<span style={{fontWeight: 600, textDecoration: 'underline'}}>Bonus:</span> Plus a trend rating that compares your track to what's going viral.
 					</div>
 					<div
-						className="text-white mb-4 font-open-sauce"
+						className="text-white mb-4"
 						style={{
 							fontSize: '20px',
 							fontWeight: 400,
 							lineHeight: 1.4,
 							letterSpacing: '0.2px',
 							textShadow: '0 2px 4px rgba(0,0,0,0.1)',
-							margin: '12px 0'
+							margin: '12px 0',
+							fontFamily: 'Satoshi, sans-serif'
 						}}
 					>
 						Join the creators who stand out.
 					</div>
-					<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-medium rounded-full px-10 py-4 text-[18px] shadow-lg hover:bg-orange-100 transition">
+					<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-bold rounded-full px-12 py-5 text-[22px] shadow-[0_8px_32px_rgba(68,68,68,0.25)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.30)] hover:bg-orange-100 transition">
 						Get Started
 					</button>
 				</div>
