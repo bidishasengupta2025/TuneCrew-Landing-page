@@ -153,9 +153,11 @@ const Hero = () => {
 					>
 						Join the creators who stand out.
 					</div>
-					<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-bold rounded-full px-12 py-5 text-[22px] shadow-[0_8px_32px_rgba(68,68,68,0.25)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.30)] hover:bg-orange-100 transition">
-						Get Started
-					</button>
+					<a href="#preview" className="w-full">
+						<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-bold rounded-full px-12 py-5 text-[22px] shadow-[0_8px_32px_rgba(68,68,68,0.25)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.30)] hover:bg-orange-100 transition w-full">
+							Get Started
+						</button>
+					</a>
 					<div className="mt-8 text-center">
 						<p className="text-white text-lg font-satoshi mb-3">See Eilumi AI in Preview</p>
 						<Link 

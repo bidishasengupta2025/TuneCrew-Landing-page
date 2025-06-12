@@ -121,7 +121,7 @@ const Header = () => {
                   {typedMenuData.header.cta.map((ctaItem, index) => (
                     <Link
                       key={index}
-                      href={ctaItem.path}
+                      href={ctaItem.title === "Create Now" ? "#preview" : ctaItem.path}
                       className="w-full xl:w-auto rounded-full border-2 border-primary dark:border-white bg-white dark:bg-transparent px-6 py-3 xl:px-5 xl:py-2 text-base font-medium text-primary dark:text-white transition-colors hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary shadow-md xl:shadow-none mb-2 xl:mb-0"
                       style={{margin: navbarOpen ? '6px 0' : undefined}}
                     >

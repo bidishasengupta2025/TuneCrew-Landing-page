@@ -4,7 +4,7 @@ import SectionHeader from "@/components/Common/SectionHeader";
 
 const Preview = () => {
   return (
-    <section className="relative z-1 overflow-hidden bg-gray-1 py-17.5 dark:bg-black dark:text-white lg:py-22.5 xl:py-27.5">
+    <section id="preview" className="relative z-1 overflow-hidden bg-gray-1 py-17.5 dark:bg-black dark:text-white lg:py-22.5 xl:py-27.5">
       <SectionHeader
         title="See Eilumi AI in Action"
         description="Experience our AI music generator firsthand and create your own viral-ready tracks."
