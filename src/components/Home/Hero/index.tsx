@@ -137,7 +137,7 @@ const Hero = () => {
 						}}
 					>
 						Make AI music for <span style={{fontWeight: 700}}>Reels, TikToks</span>, and more- Copyright free.<br/>
-						<span style={{fontWeight: 600, textDecoration: 'underline'}}>Bonus:</span> Plus a trend rating that compares your track to what's going viral.
+						<span style={{fontWeight: 600, textDecoration: 'underline'}}>Bonus:</span> Plus a Trend Rating™ that compares your track to what's going viral.
 					</div>
 					<div
 						className="text-white mb-4"
@@ -156,6 +156,15 @@ const Hero = () => {
 					<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-bold rounded-full px-12 py-5 text-[22px] shadow-[0_8px_32px_rgba(68,68,68,0.25)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.30)] hover:bg-orange-100 transition">
 						Get Started
 					</button>
+					<div className="mt-8 text-center">
+						<p className="text-white text-lg font-satoshi mb-3">See Eilumi AI in Preview</p>
+						<Link 
+							href="/preview"
+							className="inline-block text-white hover:text-orange-100 transition-colors duration-300 font-satoshi text-base underline"
+						>
+							Preview Eilumi AI
+						</Link>
+					</div>
 				</div>
 				{/* Right: App Screenshots */}
 				<div className="flex-1 flex justify-center md:justify-end mt-16 md:mt-24">
