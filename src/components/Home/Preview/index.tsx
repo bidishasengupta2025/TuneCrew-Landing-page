@@ -15,7 +15,7 @@ const Preview = () => {
         <div className="relative z-1 mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
           <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
             <iframe
-              src="https://eilumi-music-spark.vercel.app/"
+              src="https://eilumi-groove-generator-alpha.vercel.app"
               className="w-full h-[800px]"
               style={{ border: 'none' }}
               title="Eilumi AI Preview"
