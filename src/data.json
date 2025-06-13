@@ -11,7 +11,7 @@
             {
                 "title": "Create Now",
                 "newTab": false,
-                "path": "#music-generator",
+                "path": "#preview",
                 "style": "border-primary"
             },
             {
