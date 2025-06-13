@@ -163,15 +163,6 @@ const Hero = () => {
 							Get Started
 						</button>
 					</a>
-					<div className="mt-8 text-center">
-						<p className="text-white text-lg font-satoshi mb-3">See Eilumi AI in Preview</p>
-						<Link 
-							href="/preview"
-							className="inline-block text-white hover:text-orange-100 transition-colors duration-300 font-satoshi text-base underline"
-						>
-							Preview Eilumi AI
-						</Link>
-					</div>
 				</div>
 				{/* Right: App Screenshots */}
 				<div className="flex-1 flex justify-center md:justify-end mt-16 md:mt-24">
