@@ -10,8 +10,8 @@
             },
             {
                 "title": "Create Now",
-                "newTab": false,
-                "path": "#preview",
+                "newTab": true,
+                "path": "https://eilumi-groove-generator-bidisha-senguptas-projects.vercel.app",
                 "style": "border-primary"
             },
             {

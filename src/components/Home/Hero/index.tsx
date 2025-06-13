@@ -153,7 +153,12 @@ const Hero = () => {
 					>
 						Join the creators who stand out.
 					</div>
-					<a href="#preview" className="w-full">
+					<a
+						href="https://eilumi-groove-generator-bidisha-senguptas-projects.vercel.app"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="w-full"
+					>
 						<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-bold rounded-full px-12 py-5 text-[22px] shadow-[0_8px_32px_rgba(68,68,68,0.25)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.30)] hover:bg-orange-100 transition w-full">
 							Get Started
 						</button>
