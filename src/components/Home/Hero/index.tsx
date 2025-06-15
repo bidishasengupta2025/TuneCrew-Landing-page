@@ -154,7 +154,7 @@ const Hero = () => {
 						Join the creators who stand out.
 					</div>
 					<a
-						href="https://eilumi-spark-generator-v2-nry3-llcjrj16c.vercel.app"
+						href="https://eilumi-zoom.vercel.app"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="w-full"
