@@ -4,7 +4,6 @@ import FeaturesWithImage from "./FeaturesWithImage";
 import Counter from "./Counter";
 import FAQ from "./FAQ";
 import Testimonials from "./Testimonials";
-import Pricing from "./Pricing";
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
       <FeaturesWithImage />
       <Counter />
       <Testimonials />
-      <Pricing />
       <FAQ />
     </>
   );

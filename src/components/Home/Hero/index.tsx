@@ -44,6 +44,24 @@ import AIMusicGenerator from "../AIMusicGenerator";
   opacity: 0;
   animation: fadeInSoft 0.6s ease forwards;
 }
+@keyframes dynamicUnderlay {
+  0% { 
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.05) 100%);
+    transform: translateX(-100%);
+  }
+  50% { 
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 25%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.3) 75%, rgba(255,255,255,0.1) 100%);
+    transform: translateX(0%);
+  }
+  100% { 
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.05) 100%);
+    transform: translateX(100%);
+  }
+}
+.dynamic-underlay {
+  animation: dynamicUnderlay 3s ease-in-out infinite;
+  background-size: 200% 100%;
+}
 `}</style>
 
 const Hero = () => {
@@ -115,60 +133,139 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-0 pt-[48px] md:pt-0 flex flex-col justify-center items-center bg-[#E55A2B] py-6 md:py-8" style={{height: 'auto', maxHeight: 'none'}}>
-			<div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-8">
+		<section className="w-full min-h-screen pt-[60px] md:pt-[100px] flex flex-col justify-center items-center bg-[#E55A2B] py-4 md:py-6" style={{height: 'auto', maxHeight: 'none'}}>
+			<div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4">
 				{/* Left: Text Content */}
-				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-20 md:mt-28 max-w-xl md:max-w-2xl px-4 md:px-8 py-4 md:py-6">
+				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-2 md:mt-12 max-w-xl md:max-w-2xl px-2 md:px-8 py-2 md:py-4">
 					<h1
-						className="font-satoshi text-3xl font-bold -tracking-[1.6px] text-white lg:text-heading-4 xl:text-heading-2"
+						className="text-xl font-bold text-white lg:text-2xl xl:text-3xl mb-4 md:mb-6"
+						style={{
+							color: '#ffffff',
+							textShadow: '0 4px 8px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.2)',
+							fontFamily: 'Satoshi, sans-serif',
+							letterSpacing: '0.5px',
+							position: 'relative'
+						}}
 					>
-						Your content is original. Shouldn't your music be too?
+						<span className="dynamic-underlay" style={{
+							padding: '6px 12px',
+							borderRadius: '6px',
+							display: 'inline-block',
+							borderBottom: '2px solid rgba(255,255,255,0.4)',
+							position: 'relative',
+							overflow: 'hidden'
+						}}>
+							AI Music That Hooks. No Strikes. More Views.
+						</span>
 					</h1>
 					<div
-						className="text-white mt-4 mb-4"
+						className="text-white mb-3"
 						style={{
-							fontSize: '1.35rem',
+							fontSize: '1.4rem',
 							fontWeight: 500,
-							lineHeight: 1.4,
-							letterSpacing: '0.3px',
-							textShadow: '0 2px 4px rgba(0,0,0,0.1)',
-							margin: '12px 0',
+							lineHeight: 1.3,
+							letterSpacing: '0.2px',
+							textShadow: '0 1px 3px rgba(0,0,0,0.2)',
 							fontFamily: 'Satoshi, sans-serif'
 						}}
 					>
-						Make AI music for <span style={{fontWeight: 700}}>Reels, TikToks</span>, and more- Copyright free.<br/>
-						<span style={{fontWeight: 600, textDecoration: 'underline'}}>Bonus:</span> Plus a Trend Rating™ that compares your track to what's going viral.
+						<span style={{textShadow: '0 2px 4px rgba(0,0,0,0.4)', fontWeight: '600'}}>$150K/year</span> from Viral Content — Ready?
+					</div>
+					<div
+						className="text-white mb-2"
+						style={{
+							fontSize: '1.3rem',
+							fontWeight: 500,
+							lineHeight: 1.4,
+							letterSpacing: '0.2px',
+							textShadow: '0 2px 4px rgba(0,0,0,0.2)',
+							fontFamily: 'Satoshi, sans-serif'
+						}}
+					>
+						<span style={{textShadow: '0 2px 4px rgba(0,0,0,0.4)', fontWeight: '600'}}>Secret Weapon:</span> AI-powered background music that hooks views in 3 seconds — scored against 1,000s of viral tracks- Copyright free!
+					</div>
+
+
+					<div
+						className="text-white relative overflow-hidden mb-4 md:mb-6"
+						style={{
+							fontSize: '1.3rem',
+							fontWeight: 600,
+							lineHeight: 1.4,
+							letterSpacing: '0.2px',
+							textShadow: '0 2px 4px rgba(0,0,0,0.2)',
+							fontFamily: 'Satoshi, sans-serif',
+							maxWidth: '100%',
+							width: '100%'
+						}}
+					>
+						<div
+							className="absolute inset-0 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-lg"
+							style={{
+								transform: 'skew(-1deg)',
+								zIndex: -1,
+								background: 'linear-gradient(90deg, #dc2626 0%, #ea580c 50%, #dc2626 100%)',
+								boxShadow: '0 4px 12px rgba(220, 38, 38, 0.4)'
+							}}
+						></div>
+						<div 
+							className="relative px-3 py-2 md:px-4 md:py-3 text-center font-semibold"
+							style={{
+								animation: 'ticker 17.784s linear infinite',
+								whiteSpace: 'nowrap',
+								display: 'inline-block',
+								width: 'max-content'
+							}}
+						>
+							<span className="text-white font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>BREAKING:</span> <span className="text-white font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>Over 10M creators</span> <span className="text-white font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>hit by copyright strikes in 2024. 3 Strikes = Channel suspended. Protect your channel now.</span>
+						</div>
 					</div>
 					<div
 						className="text-white mb-4"
 						style={{
-							fontSize: '20px',
-							fontWeight: 400,
-							lineHeight: 1.4,
-							letterSpacing: '0.2px',
-							textShadow: '0 2px 4px rgba(0,0,0,0.1)',
-							margin: '12px 0',
+							fontSize: '1.4rem',
+							fontWeight: 700,
+							lineHeight: 1.3,
+							letterSpacing: '0.3px',
+							textShadow: '0 2px 4px rgba(0,0,0,0.3)',
 							fontFamily: 'Satoshi, sans-serif'
 						}}
 					>
-						Join the creators who stand out.
+						Creators, don't follow the trend, Become The One!
 					</div>
-					<a
-						href="https://eilumi-zoom.vercel.app"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="w-full"
+
+					<button 
+						onClick={() => {
+							// Trigger the waitlist modal
+							const event = new CustomEvent('openWaitlist');
+							window.dispatchEvent(event);
+						}}
+						className="mt-2 md:mt-4 bg-white text-black font-open-sauce font-bold rounded-full px-6 py-3 md:px-10 md:py-4 text-[14px] md:text-[18px] shadow-[0_8px_32px_rgba(68,68,68,0.3)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.4)] hover:bg-orange-100 transition w-auto transform hover:scale-105"
 					>
-						<button className="mt-6 md:mt-8 bg-white text-black font-open-sauce font-bold rounded-full px-12 py-5 text-[22px] shadow-[0_8px_32px_rgba(68,68,68,0.25)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.30)] hover:bg-orange-100 transition w-full">
-							Get Started
-						</button>
-					</a>
+						Join Waitlist
+					</button>
+					<div
+						className="text-white mt-8"
+						style={{
+							fontSize: '0.8rem',
+							fontWeight: 400,
+							fontStyle: 'italic',
+							lineHeight: 1.4,
+							letterSpacing: '0.1px',
+							textShadow: '0 1px 2px rgba(0,0,0,0.1)',
+							margin: '8px 0',
+							fontFamily: 'Satoshi, sans-serif',
+							opacity: 0.8
+						}}
+					>
+						*Results may vary. Earnings depend on content quality, consistency, and market factors. Eilumi provides tools but does not guarantee income or viral success.
+					</div>
 				</div>
 				{/* Right: App Screenshots */}
-				<div className="flex-1 flex justify-center md:justify-end mt-16 md:mt-24">
-					<div className="flex flex-row gap-6 items-end">
-						<img src="/images/app-screenshot.jpg" alt="App Screenshot" className="w-[203px] md:w-[253px] rounded-2xl shadow-2xl border-4 border-white transform rotate-[-12deg] md:rotate-[-10deg] mt-4 md:mt-0" style={{boxShadow: '0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)'}} />
-						<img src="/images/app-screenshort-2.jpg" alt="App Screenshot 2" className="w-[203px] md:w-[253px] rounded-2xl shadow-2xl border-4 border-white transform rotate-[8deg] md:rotate-[10deg] mt-8 md:mt-12" style={{boxShadow: '0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)'}} />
+				<div className="flex-1 flex justify-center md:justify-end mt-4 md:mt-12">
+					<div className="flex flex-row gap-3 md:gap-6 items-end">
+						<img src="/images/app-screenshot.jpg" alt="App Screenshot" className="w-[150px] md:w-[253px] rounded-2xl shadow-2xl border-4 border-white transform rotate-[-12deg] md:rotate-[-10deg] mt-4 md:mt-0" style={{boxShadow: '0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)'}} />
+						<img src="/images/app-screenshort-2.jpg" alt="App Screenshot 2" className="w-[150px] md:w-[253px] rounded-2xl shadow-2xl border-4 border-white transform rotate-[8deg] md:rotate-[10deg] mt-8 md:mt-12" style={{boxShadow: '0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)'}} />
 					</div>
 				</div>
 			</div>

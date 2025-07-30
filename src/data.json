@@ -9,15 +9,9 @@
                 "style": "border-primary"
             },
             {
-                "title": "Create Now",
-                "newTab": true,
-                "path": "https://eilumi-zoom.vercel.app",
-                "style": "border-primary"
-            },
-            {
-                "title": "Pricing",
+                "title": "Join Waitlist",
                 "newTab": false,
-                "path": "#pricing",
+                "path": "#",
                 "style": "border-primary"
             }
         ],
@@ -162,68 +156,7 @@
         },
         "show": true
     },
-    "pricing":{
-        "title":"Pricing Plans",
-        "description":"Start simple or scale big—Eilumi AI has a plan for every creator.",
-        "pricing":[
-            {
-                "stripePriceId": "stripe_ID",
-                "unit_amount": 0,
-                "time_period":"month",
-                "nickname": "Free",
-                "description": "Just starting out? Test the waters with no risk. Explore what AI music creation feels like with Eilumi AI",
-                "subtitle": "For Beginners",
-                "includes": [
-                    "3 AI music generations per month",
-                    "Lite Viral Score (basic insights only)",
-                    "Access to a selection of beats and basic AI composition tools",
-                    "Watermarked exports",
-                    "Personal/non-commercial use only"
-                ],
-                "icon": "/images/pricing/pricing-icon-01.svg",
-                "payment_url":"#"
-            },
-            {
-                "stripePriceId": "stripe_ID",
-                "unit_amount": 499,
-                "time_period":"month",
-                "nickname": "Basic",
-                "description": "For TikTokers, YouTubers & creators chasing viral-ready music. More tracks, smarter insights, real earnings.",
-                "subtitle": "For Creators",
-                "includes": [
-                    "15 AI-generated tracks per month",
-                    "Full Viral Score with trend recommendations",
-                    "Access to a selection of beats and vocal tuning + melody tools",
-                    "No watermark on exports",
-                    "5 music distributions per month (Spotify, Apple, TikTok)",
-                    "Monetization & licensing enabled"
-                ],
-                "icon": "/images/pricing/pricing-icon-01.svg",
-                "payment_url":"https://buy.stripe.com/00g293cyd3MtbHW5km",
-                "active": true
-              },
-              {
-                "stripePriceId": "stripe_ID",
-                "unit_amount": 1999,
-                "time_period":"month",
-                "nickname": "Pro",
-                "description": "Unlock advanced composition, harmonization, and vocal enhancement features.",
-                "subtitle": "For Professionals",
-                "includes": [
-                    "30 AI-generated tracks/month",
-                    "Advanced viral performance analytics",
-                    "Full access to all beats & effects",
-                    "Pro-level vocal & sound enhancements",
-                    "Multi-layer AI composition tools",
-                    "Distribute to all major platforms",
-                    "Need more? Contact us for custom pricing"
-                ],
-                "icon": "/images/pricing/pricing-icon-02.svg",
-                "icon2": "/images/pricing/pricing-icon-02-2.svg",
-                "payment_url":"https://buy.stripe.com/test_6oE9Bz9p92dqdQ03c8"
-              }
-        ]
-    },
+
     "testimonials":{
         "title": "A Global Movement of Viral Music Makers",
         "description": "Join thousands of creators using AI to craft hit-ready tracks, generate viral clips, and let the algorithm do the heavy lifting.",

@@ -9,6 +9,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { menuData } from "./menuData";
 import { onScroll } from "@/libs/scrollActive";
 import { usePathname } from "next/navigation";
+import WaitlistForm from "../Common/WaitlistForm";
 
 // Add these type definitions at the top of the file after the imports
 type HeaderMenuItem = {
@@ -30,6 +31,7 @@ const typedMenuData = menuDataJson as { header: HeaderData };
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const pathUrl = usePathname();
 
   const navbarToggleHandler = () => {
@@ -45,6 +47,25 @@ const Header = () => {
     }
     setNavbarOpen(false); // Close mobile menu if open
   };
+
+  // Handle waitlist button click
+  const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>, ctaItem: any) => {
+    if (ctaItem.title === "Join Waitlist") {
+      e.preventDefault();
+      setIsWaitlistOpen(true);
+      setNavbarOpen(false); // Close mobile menu if open
+    }
+  };
+
+  // Listen for custom event from hero section
+  useEffect(() => {
+    const handleOpenWaitlist = () => {
+      setIsWaitlistOpen(true);
+    };
+
+    window.addEventListener('openWaitlist', handleOpenWaitlist);
+    return () => window.removeEventListener('openWaitlist', handleOpenWaitlist);
+  }, []);
 
   // Handle scroll
   useEffect(() => {
@@ -135,6 +156,7 @@ const Header = () => {
                       href={ctaItem.path}
                       target={ctaItem.newTab ? "_blank" : undefined}
                       rel={ctaItem.newTab ? "noopener noreferrer" : undefined}
+                      onClick={(e) => handleWaitlistClick(e, ctaItem)}
                       className="w-full xl:w-auto rounded-full border-2 border-primary dark:border-white bg-white dark:bg-transparent px-6 py-3 xl:px-5 xl:py-2 text-base font-medium text-primary dark:text-white transition-colors hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary shadow-md xl:shadow-none mb-2 xl:mb-0"
                       style={{margin: navbarOpen ? '6px 0' : undefined}}
                     >
@@ -147,6 +169,12 @@ const Header = () => {
           </nav>
         </div>
       </div>
+      
+      {/* Waitlist Form Modal */}
+      <WaitlistForm 
+        isOpen={isWaitlistOpen} 
+        onClose={() => setIsWaitlistOpen(false)} 
+      />
     </header>
   );
 };

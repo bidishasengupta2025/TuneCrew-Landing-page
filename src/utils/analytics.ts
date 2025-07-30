@@ -1,37 +1,23 @@
-import ReactGA from 'react-ga4';
-import config from "@/data.json";
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
 
 export const initGA = () => {
-  
-  const {GA_MEASUREMENT_ID } = config.googleAnalytics;
   if (typeof window !== 'undefined') {
-    ReactGA.initialize(GA_MEASUREMENT_ID);
+    window.gtag = window.gtag || function() {
+      (window.gtag.q = window.gtag.q || []).push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', process.env.NEXT_PUBLIC_GA_ID);
   }
 };
 
 export const logPageView = () => {
-  if (typeof window !== 'undefined') {
-    ReactGA.send({ hitType: 'pageview', page: window.location.pathname + window.location.search });
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+      page_path: window.location.pathname + window.location.search,
+    });
   }
-};
-
-export const logEvent = ({
-    category,
-    action,
-    label,
-    value,
-  }: {
-    category: string;
-    action: string;
-    label?: string;
-    value?: number;
-  }) => {
-    if (typeof window !== 'undefined') {
-      ReactGA.event({
-        category,
-        action,
-        label,
-        value,
-      });
-    }
-  };
+}; 
