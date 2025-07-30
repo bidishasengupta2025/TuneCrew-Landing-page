@@ -113,7 +113,7 @@ const Footer = () => {
 										className='text-gray-5 duration-200 ease-out hover:text-white'
 										href='#'
 									>
-										Pricing & Plans
+										Features
 									</a>
 								</li>
 								<li>
@@ -195,7 +195,7 @@ const Footer = () => {
 										className='text-gray-5 duration-200 ease-out hover:text-white'
 										href='#'
 									>
-										Pricing & Plans
+										Features
 									</a>
 								</li>
 								<li>

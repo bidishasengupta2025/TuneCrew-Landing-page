@@ -312,13 +312,13 @@ const AIMusicGenerator = () => {
             <div 
               className="text-xs text-white/90 mt-1 cursor-pointer hover:text-[#f15107] transition-colors"
               onClick={() => {
-                document.getElementById('pricing')?.scrollIntoView({ 
+                document.getElementById('features')?.scrollIntoView({ 
                   behavior: 'smooth',
                   block: 'start'
                 });
               }}
             >
-              ✨ Upgrade to download tracks
+              ✨ Learn more about features
             </div>
           </div>
         </div>
