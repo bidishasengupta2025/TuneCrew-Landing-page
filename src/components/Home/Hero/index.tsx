@@ -138,25 +138,17 @@ const Hero = () => {
 				{/* Left: Text Content */}
 				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-1 md:mt-12 max-w-full md:max-w-2xl px-1 md:px-8 py-1 md:py-4">
 					<h1
-						className="text-lg font-bold text-white lg:text-xl xl:text-2xl mb-3 md:mb-6"
+						className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-6"
 						style={{
 							color: '#ffffff',
 							textShadow: '0 4px 8px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.2)',
 							fontFamily: 'Satoshi, sans-serif',
 							letterSpacing: '0.5px',
-							position: 'relative'
+							position: 'relative',
+							lineHeight: 1.15
 						}}
 					>
-						<span className="dynamic-underlay" style={{
-							padding: '6px 12px',
-							borderRadius: '6px',
-							display: 'inline-block',
-							borderBottom: '2px solid rgba(255,255,255,0.4)',
-							position: 'relative',
-							overflow: 'hidden'
-						}}>
-							AI Music That Hooks. No Strikes. More Views.
-						</span>
+						$150K/year from Viral Content — Ready?
 					</h1>
 					<div
 						className="text-white mb-3"
@@ -174,7 +166,7 @@ const Hero = () => {
 					<div
 						className="text-white mb-2"
 						style={{
-							fontSize: '1.0rem',
+							fontSize: '1.1rem',
 							fontWeight: 500,
 							lineHeight: 1.4,
 							letterSpacing: '0.2px',
@@ -182,7 +174,7 @@ const Hero = () => {
 							fontFamily: 'Satoshi, sans-serif'
 						}}
 					>
-						<span style={{textShadow: '0 2px 4px rgba(0,0,0,0.4)', fontWeight: '600'}}>Secret Weapon:</span> AI-powered background music that hooks views in 3 seconds — scored against 1,000s of viral tracks- Copyright free!
+						<span style={{textShadow: '0 2px 4px rgba(0,0,0,0.4)', fontWeight: '600'}}>Secret Weapon:</span> AI-powered background music that hooks viewers in 3 seconds — compare with 1,000s of viral tracks- Copyright free!
 					</div>
 
 
