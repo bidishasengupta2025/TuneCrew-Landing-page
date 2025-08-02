@@ -62,6 +62,28 @@ import AIMusicGenerator from "../AIMusicGenerator";
   animation: dynamicUnderlay 3s ease-in-out infinite;
   background-size: 200% 100%;
 }
+
+@keyframes glossyShift {
+  0%, 100% { 
+    background-position: 0% 50%;
+    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+  }
+  50% { 
+    background-position: 100% 50%;
+    box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+  }
+}
+
+@keyframes glossyShiftDark {
+  0%, 100% { 
+    background-position: 0% 50%;
+    box-shadow: 0 4px 20px rgba(194, 65, 12, 0.2);
+  }
+  50% { 
+    background-position: 100% 50%;
+    box-shadow: 0 6px 25px rgba(194, 65, 12, 0.3);
+  }
+}
 `}</style>
 
 const Hero = () => {
@@ -133,98 +155,43 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-screen pt-[60px] md:pt-[100px] flex flex-col justify-center items-center bg-[#E55A2B] py-2 md:py-6" style={{height: 'auto', maxHeight: 'none'}}>
-			<div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-2 md:px-4 py-2 md:py-4">
-				{/* Left: Text Content */}
-				<div className="flex-1 flex flex-col items-start md:items-start text-left md:text-left mt-1 md:mt-12 max-w-full md:max-w-2xl px-1 md:px-8 py-1 md:py-4">
-					<h1
-						className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-6"
+		<section className="w-full min-h-screen pt-[60px] md:pt-[80px] flex flex-col justify-center items-center py-0 md:py-1 relative" style={{height: 'auto', maxHeight: 'none'}}>
+			{/* Hero Section Background */}
+			<div 
+				className="absolute inset-0 bg-orange-100 dark:bg-orange-800"
+				style={{
+					zIndex: -1
+				}}
+			></div>
+			<div className="container mx-auto flex flex-col items-center justify-center px-0 md:px-2 py-0 md:py-1 relative z-10">
+				{/* Centered Text Content */}
+				<div className="flex flex-col items-center text-center w-full max-w-none px-1 md:px-4 py-0 md:py-1">
+					<div
+						className="text-4xl md:text-7xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4"
 						style={{
-							color: '#ffffff',
-							textShadow: '0 4px 8px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.2)',
 							fontFamily: 'Satoshi, sans-serif',
 							letterSpacing: '0.5px',
 							position: 'relative',
-							lineHeight: 1.15
+							lineHeight: 1.2
 						}}
 					>
-						$150K/year from Viral Content — Ready?
-					</h1>
-					<div
-						className="text-white mb-3"
-						style={{
-							fontSize: '1.1rem',
-							fontWeight: 500,
-							lineHeight: 1.3,
-							letterSpacing: '0.2px',
-							textShadow: '0 1px 3px rgba(0,0,0,0.2)',
-							fontFamily: 'Satoshi, sans-serif'
-						}}
-					>
-						<span style={{textShadow: '0 2px 4px rgba(0,0,0,0.4)', fontWeight: '600'}}>$150K/year</span> from Viral Content — Ready?
+						Creator: Your Video's Background Music Has 3 Seconds to Hook Viewers
 					</div>
 					<div
-						className="text-white mb-2"
+						className="text-gray-700 dark:text-white mb-4 md:mb-6 max-w-6xl"
 						style={{
-							fontSize: '1.1rem',
-							fontWeight: 500,
-							lineHeight: 1.4,
+							fontSize: '1.68rem',
+							fontWeight: 400,
+							lineHeight: 1.6,
 							letterSpacing: '0.2px',
-							textShadow: '0 2px 4px rgba(0,0,0,0.2)',
 							fontFamily: 'Satoshi, sans-serif'
 						}}
 					>
-						<span style={{textShadow: '0 2px 4px rgba(0,0,0,0.4)', fontWeight: '600'}}>Secret Weapon:</span> AI-powered background music that hooks viewers in 3 seconds — compare with 1,000s of viral tracks- Copyright free!
+						Generic stock music = <strong>lost views and income</strong>. Trending copyrighted music = <strong>legal disaster</strong>. Original viral-style music = <strong>higher engagement and safe monetization</strong>. Eilumi AI creates <strong>trending tracks</strong> for TikTok, Reels, and Shorts while protecting you from <strong>copyright strikes</strong> that remove monetization, flag channels, and cancel brand deals.
 					</div>
 
 
-					<div
-						className="text-white relative overflow-hidden mb-3 md:mb-6"
-						style={{
-							fontSize: '1.0rem',
-							fontWeight: 600,
-							lineHeight: 1.4,
-							letterSpacing: '0.2px',
-							textShadow: '0 2px 4px rgba(0,0,0,0.2)',
-							fontFamily: 'Satoshi, sans-serif',
-							maxWidth: '100%',
-							width: '100%'
-						}}
-					>
-						<div
-							className="absolute inset-0 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-lg"
-							style={{
-								transform: 'skew(-1deg)',
-								zIndex: -1,
-								background: 'linear-gradient(90deg, #dc2626 0%, #ea580c 50%, #dc2626 100%)',
-								boxShadow: '0 4px 12px rgba(220, 38, 38, 0.4)'
-							}}
-						></div>
-						<div 
-							className="relative px-3 py-2 md:px-4 md:py-3 text-center font-semibold"
-							style={{
-								animation: 'ticker 17.784s linear infinite',
-								whiteSpace: 'nowrap',
-								display: 'inline-block',
-								width: 'max-content'
-							}}
-						>
-							<span className="text-white font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>BREAKING:</span> <span className="text-white font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>Over 10M creators</span> <span className="text-white font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>hit by copyright strikes in 2024. 3 Strikes = Channel suspended. Protect your channel now.</span>
-						</div>
-					</div>
-					<div
-						className="text-white mb-3"
-						style={{
-							fontSize: '1.1rem',
-							fontWeight: 700,
-							lineHeight: 1.3,
-							letterSpacing: '0.3px',
-							textShadow: '0 2px 4px rgba(0,0,0,0.3)',
-							fontFamily: 'Satoshi, sans-serif'
-						}}
-					>
-						Creators, don't follow the trend, Become The One!
-					</div>
+
 
 					<button 
 						onClick={() => {
@@ -232,32 +199,37 @@ const Hero = () => {
 							const event = new CustomEvent('openWaitlist');
 							window.dispatchEvent(event);
 						}}
-						className="mt-2 md:mt-4 bg-white text-black font-open-sauce font-bold rounded-full px-4 py-2 md:px-10 md:py-4 text-[12px] md:text-[18px] shadow-[0_8px_32px_rgba(68,68,68,0.3)] hover:shadow-[0_12px_40px_rgba(68,68,68,0.4)] hover:bg-orange-100 transition w-auto transform hover:scale-105"
+						className="mt-4 md:mt-6 bg-orange-600 text-white font-bold rounded-lg px-8 py-4 md:px-12 md:py-4 text-[16px] md:text-[18px] hover:bg-orange-700 transition w-auto transform hover:scale-105 flex items-center gap-2"
 					>
-						Join Waitlist
+						Join the Waitlist →
 					</button>
-					<div
-						className="text-white mt-4"
-						style={{
-							fontSize: '0.7rem',
-							fontWeight: 400,
-							fontStyle: 'italic',
-							lineHeight: 1.4,
-							letterSpacing: '0.1px',
-							textShadow: '0 1px 2px rgba(0,0,0,0.1)',
-							margin: '8px 0',
-							fontFamily: 'Satoshi, sans-serif',
-							opacity: 0.8
-						}}
-					>
-						*Results may vary. Earnings depend on content quality, consistency, and market factors. Eilumi provides tools but does not guarantee income or viral success.
-					</div>
-				</div>
-				{/* Right: App Screenshots */}
-				<div className="flex-1 flex justify-center md:justify-end mt-2 md:mt-12">
-					<div className="flex flex-row gap-2 md:gap-6 items-end">
-						<img src="/images/app-screenshot.jpg" alt="App Screenshot" className="w-[120px] md:w-[253px] rounded-2xl shadow-2xl border-4 border-white transform rotate-[-12deg] md:rotate-[-10deg] mt-2 md:mt-0" style={{boxShadow: '0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)'}} />
-						<img src="/images/app-screenshort-2.jpg" alt="App Screenshot 2" className="w-[120px] md:w-[253px] rounded-2xl shadow-2xl border-4 border-white transform rotate-[8deg] md:rotate-[10deg] mt-4 md:mt-12" style={{boxShadow: '0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)'}} />
+					
+					{/* Feature Highlights */}
+					<div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-6 md:gap-8">
+						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
+							<div className="w-7 h-7 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
+								<span className="text-red-600 dark:text-red-300 font-bold text-sm">🎯</span>
+							</div>
+							<span>Built by Creators Who Get It</span>
+						</div>
+						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
+							<div className="w-7 h-7 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center">
+								<span className="text-yellow-600 dark:text-yellow-300 font-bold text-sm">⭐</span>
+							</div>
+							<span>No Copyright Headaches</span>
+						</div>
+						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
+							<div className="w-7 h-7 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
+								<span className="text-red-600 dark:text-red-300 font-bold text-sm">🛡️</span>
+							</div>
+							<span>Protects Your Income</span>
+						</div>
+						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
+							<div className="w-7 h-7 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+								<span className="text-green-600 dark:text-green-300 font-bold text-sm">📊</span>
+							</div>
+							<span>4x More Engagement</span>
+						</div>
 					</div>
 				</div>
 			</div>
