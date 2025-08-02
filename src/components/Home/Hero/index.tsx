@@ -155,7 +155,7 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-screen pt-[60px] md:pt-[80px] flex flex-col justify-center items-center py-0 md:py-1 relative" style={{height: 'auto', maxHeight: 'none'}}>
+		<section className="w-full min-h-screen pt-[120px] md:pt-[140px] flex flex-col justify-center items-center py-8 md:py-12 relative" style={{height: 'auto', maxHeight: 'none'}}>
 			{/* Hero Section Background */}
 			<div 
 				className="absolute inset-0"
@@ -168,7 +168,7 @@ const Hero = () => {
 				{/* Centered Text Content */}
 				<div className="flex flex-col items-center text-center w-full max-w-none px-1 md:px-4 py-0 md:py-1">
 					<div
-						className="text-4xl md:text-7xl font-bold text-white mb-3 md:mb-4"
+						className="text-3xl md:text-6xl font-bold text-white mb-3 md:mb-4"
 						style={{
 							fontFamily: 'Satoshi, sans-serif',
 							letterSpacing: '0.5px',
