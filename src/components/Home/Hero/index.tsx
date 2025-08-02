@@ -155,19 +155,20 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-screen pt-[60px] md:pt-[80px] flex flex-col justify-center items-center py-0 md:py-1 relative" style={{height: 'auto', maxHeight: 'none'}}>
+		<section className="w-full min-h-screen pt-[30px] md:pt-[40px] flex flex-col justify-center items-center py-0 md:py-1 relative" style={{height: 'auto', maxHeight: 'none'}}>
 			{/* Hero Section Background */}
 			<div 
-				className="absolute inset-0 bg-orange-100 dark:bg-orange-800"
+				className="absolute inset-0"
 				style={{
-					zIndex: -1
+					zIndex: -1,
+					background: 'linear-gradient(135deg, #FF8C42 0%, #FF6B35 25%, #E74C3C 50%, #C0392B 75%, #A93226 100%)'
 				}}
 			></div>
 			<div className="container mx-auto flex flex-col items-center justify-center px-0 md:px-2 py-0 md:py-1 relative z-10">
 				{/* Centered Text Content */}
 				<div className="flex flex-col items-center text-center w-full max-w-none px-1 md:px-4 py-0 md:py-1">
 					<div
-						className="text-4xl md:text-7xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4"
+						className="text-4xl md:text-7xl font-bold text-white mb-3 md:mb-4"
 						style={{
 							fontFamily: 'Satoshi, sans-serif',
 							letterSpacing: '0.5px',
@@ -178,7 +179,7 @@ const Hero = () => {
 						Creator: Your Video's Background Music Has 3 Seconds to Hook Viewers
 					</div>
 					<div
-						className="text-gray-700 dark:text-white mb-4 md:mb-6 max-w-6xl"
+						className="text-white mb-4 md:mb-6 max-w-6xl"
 						style={{
 							fontSize: '1.68rem',
 							fontWeight: 400,
@@ -206,27 +207,27 @@ const Hero = () => {
 					
 					{/* Feature Highlights */}
 					<div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-6 md:gap-8">
-						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
-							<div className="w-7 h-7 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
-								<span className="text-red-600 dark:text-red-300 font-bold text-sm">🎯</span>
+						<div className="flex items-center gap-2 text-base md:text-lg text-white font-bold">
+							<div className="w-7 h-7 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+								<span className="text-white font-bold text-sm">🎯</span>
 							</div>
 							<span>Built by Creators Who Get It</span>
 						</div>
-						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
-							<div className="w-7 h-7 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center">
-								<span className="text-yellow-600 dark:text-yellow-300 font-bold text-sm">⭐</span>
+						<div className="flex items-center gap-2 text-base md:text-lg text-white font-bold">
+							<div className="w-7 h-7 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+								<span className="text-white font-bold text-sm">⭐</span>
 							</div>
 							<span>No Copyright Headaches</span>
 						</div>
-						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
-							<div className="w-7 h-7 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
-								<span className="text-red-600 dark:text-red-300 font-bold text-sm">🛡️</span>
+						<div className="flex items-center gap-2 text-base md:text-lg text-white font-bold">
+							<div className="w-7 h-7 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+								<span className="text-white font-bold text-sm">🛡️</span>
 							</div>
 							<span>Protects Your Income</span>
 						</div>
-						<div className="flex items-center gap-2 text-base md:text-lg text-gray-700 dark:text-white font-bold">
-							<div className="w-7 h-7 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-								<span className="text-green-600 dark:text-green-300 font-bold text-sm">📊</span>
+						<div className="flex items-center gap-2 text-base md:text-lg text-white font-bold">
+							<div className="w-7 h-7 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+								<span className="text-white font-bold text-sm">📊</span>
 							</div>
 							<span>4x More Engagement</span>
 						</div>
