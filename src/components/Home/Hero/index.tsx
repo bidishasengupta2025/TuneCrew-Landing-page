@@ -155,13 +155,13 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="w-full min-h-screen pt-[30px] md:pt-[40px] flex flex-col justify-center items-center py-0 md:py-1 relative" style={{height: 'auto', maxHeight: 'none'}}>
+		<section className="w-full min-h-screen pt-[60px] md:pt-[80px] flex flex-col justify-center items-center py-0 md:py-1 relative" style={{height: 'auto', maxHeight: 'none'}}>
 			{/* Hero Section Background */}
 			<div 
 				className="absolute inset-0"
 				style={{
 					zIndex: -1,
-					background: 'linear-gradient(135deg, #FF8C42 0%, #FF6B35 25%, #E74C3C 50%, #C0392B 75%, #A93226 100%)'
+					background: 'linear-gradient(135deg, #F0936A 0%, #E67E22 50%, #D35400 100%)'
 				}}
 			></div>
 			<div className="container mx-auto flex flex-col items-center justify-center px-0 md:px-2 py-0 md:py-1 relative z-10">
